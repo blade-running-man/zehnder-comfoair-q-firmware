@@ -1,0 +1,171 @@
+/* Styles for the "Ventilation unit" components. Colours come from VitePress's own variables so
+   light and dark themes both work without a second palette; cyber.css sets those variables to the
+   cybercore palette. Corners are squared (2px), not rounded, to match its angular look. */
+
+.vp-doc .unit-table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+.vp-doc .unit-table-wrap .unit-table {
+  /* VitePress makes every doc table display:block so it can scroll; the wrapper scrolls here,
+     so the table can be a real table and fill the width. */
+  display: table;
+  width: 100%;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.vp-doc .unit-table th,
+.vp-doc .unit-table td {
+  padding: 6px 10px;
+  vertical-align: top;
+}
+.vp-doc .unit-table .unit-group-row th {
+  background-color: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+  text-align: left;
+  padding-top: 10px;
+}
+.vp-doc .unit-table .unit-meaning {
+  min-width: 260px;
+}
+.vp-doc .unit-table .unit-firmware {
+  min-width: 140px;
+  color: var(--vp-c-text-2);
+}
+.vp-doc .unit-nowrap {
+  white-space: nowrap;
+}
+.vp-doc .unit-dim {
+  color: var(--vp-c-text-3);
+}
+.vp-doc .unit-row--absent td {
+  color: var(--vp-c-text-3);
+}
+
+.vp-doc .unit-sources {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+}
+.vp-doc .unit-sources summary {
+  cursor: pointer;
+  color: var(--vp-c-text-3);
+}
+.vp-doc .unit-sources ul {
+  margin: 2px 0 0;
+  padding-left: 16px;
+}
+.vp-doc .unit-sources li {
+  margin: 0;
+}
+.vp-doc .unit-sources li + li {
+  margin-top: 0;
+}
+
+.unit-badge {
+  display: inline-block;
+  padding: 0 7px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+.unit-badge--confirmed {
+  color: var(--vp-c-success-1);
+  background-color: var(--vp-c-success-soft);
+}
+.unit-badge--inferred {
+  color: var(--vp-c-warning-1);
+  background-color: var(--vp-c-warning-soft);
+}
+.unit-badge--unknown {
+  color: var(--vp-c-text-2);
+  background-color: var(--vp-c-default-soft);
+}
+
+.unit-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 16px 0 8px;
+}
+.unit-filter input {
+  flex: 1 1 240px;
+  max-width: 420px;
+  padding: 6px 10px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 2px;
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+}
+.unit-filter input:focus {
+  outline: none;
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 1px var(--vp-c-brand-soft);
+}
+.unit-filter-count {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+}
+
+.unit-area-summary {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 2px;
+  background-color: var(--vp-c-bg-soft);
+  font-size: 14px;
+}
+.unit-area-title {
+  font-family: var(--vp-font-family-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+.vp-doc .unit-area-summary .unit-area-text {
+  margin: 4px 0 8px;
+  color: var(--vp-c-text-2);
+}
+.unit-area-units,
+.unit-area-counts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  margin-top: 4px;
+}
+.unit-area-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.vp-doc .unit-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  margin: 16px 0;
+}
+.vp-doc .unit-meta-item {
+  padding: 8px 12px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 2px;
+  background-color: var(--vp-c-bg-soft);
+}
+.vp-doc .unit-meta dt {
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+}
+.vp-doc .unit-meta dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}

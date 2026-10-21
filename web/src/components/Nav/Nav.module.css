@@ -1,0 +1,90 @@
+.nav {
+  display: flex;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-strong);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  color: var(--brand);
+  margin-right: 12px;
+  font-family: var(--mono);
+  letter-spacing: 0.06em;
+  text-shadow: var(--glow-brand);
+}
+
+/* Chromatic glitch on the logo: two coloured copies (attr data-text, Nav.tsx), clipped to the
+   top and bottom halves, that flash and shift on occasion. Motion only — a reduced-motion viewer
+   keeps the clean cyan logo. */
+@media (prefers-reduced-motion: no-preference) {
+  .logo::before,
+  .logo::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    letter-spacing: 0.06em;
+  }
+  .logo::before {
+    color: #ff2a6d;
+    clip-path: inset(0 0 55% 0);
+    animation: logo-glitch 3s infinite steps(2, end);
+  }
+  .logo::after {
+    color: #00f0ff;
+    clip-path: inset(55% 0 0 0);
+    animation: logo-glitch 2.4s infinite steps(2, end) reverse;
+  }
+}
+
+@keyframes logo-glitch {
+  0%, 90%, 100% { transform: translateX(0); opacity: 0; }
+  92% { transform: translateX(-2px); opacity: 0.9; }
+  94% { transform: translateX(2px); opacity: 0.9; }
+  96% { transform: translateX(-1px); opacity: 0.7; }
+}
+
+/* Cyberpunk tabs: angular razor-notched, monospace, uppercase, with a neon-cyan hover. The active
+   tab is filled with the accent. clip-path clips box-shadow, so the "glow" is a text-shadow (which
+   is not clipped). Theme-aware — the tokens keep it AA in both light and dark. */
+.link {
+  padding: 5px 12px;
+  clip-path: var(--razor-sm);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.link:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+  text-shadow: var(--glow-brand);
+}
+
+.linkActive,
+.linkActive:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+  text-shadow: none;
+}
+
+.spacer {
+  margin-left: auto;
+}
+
+.themeToggle {
+  margin-left: 8px;
+}

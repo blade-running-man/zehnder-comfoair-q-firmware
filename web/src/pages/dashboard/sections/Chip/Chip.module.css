@@ -1,0 +1,26 @@
+/* A status pill that states itself in FORM as well as colour: the dot and the border are
+   there so the state survives a colour-blind eye, not only the hue. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+  background: var(--bg-sunken);
+  white-space: nowrap;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+.on   { color: var(--accent-strong); border-color: color-mix(in srgb, var(--accent) 60%, transparent); }
+.warn { color: var(--notice);        border-color: color-mix(in srgb, var(--notice) 55%, transparent); }
+.bad  { color: var(--danger);        border-color: color-mix(in srgb, var(--danger) 55%, transparent); }
+.good { color: var(--success);       border-color: color-mix(in srgb, var(--success) 55%, transparent); }

@@ -1,0 +1,21 @@
+{
+  "//": "The mock's own type check (npm run typecheck:mock). tsc -b reaches only what vite.config.ts imports, which leaves the tests out; this covers the whole mock/ tree, tests included, under the same strictness as tsconfig.node.json.",
+  "compilerOptions": {
+    "target": "es2023",
+    "lib": ["ES2023"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "erasableSyntaxOnly": true,
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": ["node"],
+    "skipLibCheck": true
+  },
+  "include": ["."]
+}

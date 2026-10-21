@@ -1,0 +1,53 @@
+# Build
+.pio/
+build/
+sdkconfig
+sdkconfig.old
+sdkconfig.*
+!sdkconfig.defaults
+managed_components/
+
+# Dependencies -- reproduced from the lock files
+node_modules/
+web/node_modules/
+docs/node_modules/
+
+# Frontend build artefacts
+web/dist/
+web/storybook-static/
+
+# Installer site and release files: tools/make_release.py builds them from the board build
+/dist/
+
+.DS_Store
+
+# Isolated agent worktrees
+.claude/worktrees/
+
+# The component manager writes managed_components/; it is refetched from the lock.
+#
+# dependencies.lock IS DELIBERATELY NOT LISTED HERE. The lock is a pin, kept for the reason
+# platformio.ini:13-19 gives for the platform pin: a floating dependency once
+# moved the toolchain under a document verified against a different tree. src/idf_component.yml
+# already pins both components to exact versions, so what the lock adds on top is `component_hash`
+# -- the guarantee that the bytes a later machine fetches are the bytes this one was built and
+# tested on. Ignoring it would leave that unpinned while the file sat in every working tree
+# claiming otherwise.
+managed_components/
+
+# Local permission overrides: a machine's setting, not the project's
+.claude/settings.local.json
+
+# Cache and local config of third-party tooling
+.impeccable/
+web/.impeccable/
+
+# Python bytecode. It was once COMMITTED and dirtied `git status` for two days running, so every
+# subagent had to be told not to touch it. It is regenerated from tools/*.py on every
+# generator run.
+__pycache__/
+*.pyc
+
+# VitePress documentation site build output and cache
+docs/.vitepress/dist/
+docs/.vitepress/cache/

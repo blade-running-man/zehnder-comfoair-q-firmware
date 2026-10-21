@@ -1,0 +1,40 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+
+.open {
+  color: var(--success);
+}
+
+.connecting {
+  color: var(--text-dim);
+}
+
+.closed {
+  color: var(--danger);
+}
+
+/* The pulse marks "working on it" so a stuck connection is not mistaken for a live one.
+   Honoured only when the viewer has not asked for less motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .connecting .dot {
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  50% { opacity: 0.25; }
+}

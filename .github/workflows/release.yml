@@ -1,0 +1,200 @@
+name: Release
+
+# DORMANT UNTIL THIS REPOSITORY HAS A GITHUB REMOTE. Nothing here has run yet: the tree has no
+# remote, so no tag push can trigger it. What it builds is reproducible locally, and that is
+# where it was checked -- `pio run -e m5stack-nanoc6 && python3 tools/make_release.py`, then
+# `python3 -m http.server -d dist 8000` and http://localhost:8000 in Chrome (docs/guide/
+# installation.md). The first tag pushed after a remote exists is this file's first real test.
+#
+# Builds the installable firmware and publishes the browser installer. Structure, permissions and
+# reasoning follow the retired ESPHome project's release.yml, which did the same job.
+#
+# Triggered by a version tag, not by a push to main: a person clicking Install on a web page must
+# never receive an unreviewed commit. workflow_dispatch is here so the page can be republished
+# without cutting a tag (an index.html fix, a re-deploy after enabling Pages); dispatched from a
+# branch it builds and keeps the artifact for inspection, and only a tag ref reaches a release
+# or the Pages site.
+#
+# Requires GitHub Pages enabled with "GitHub Actions" as the source (Settings -> Pages). Without
+# it the deploy job fails with a 404 from configure-pages and nothing else here is at fault.
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+# Least privilege by default; each job adds only what it needs.
+permissions: {}
+
+# Not cancel-in-progress: a half-deployed site or a half-uploaded release is worse than a queued
+# run. Releases are rare enough that queueing costs nothing.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build the M5Stack NanoC6 release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # fetch-depth 0 brings the tags and the history. The version in the image is
+      # tools/version.py's SemVer from `git describe --tags --long --match 'v[0-9]*'`; a shallow
+      # clone has no tags, so a tagged release would be stamped 0.0.0-dev.1+g<sha> and the
+      # checks below would fail it.
+      - uses: actions/checkout@v4.3.0
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      # Before anything is built: the pushed tag must BE the version of this checkout
+      # (tools/version.py refuses a tag that is not SemVer, e.g. v0.01.0), and CHANGELOG.md must
+      # describe it -- that section becomes the release text, and a release nobody described is
+      # one the owner cannot tell from the last. Ten seconds here instead of a failed publish
+      # after a ten-minute build. On a workflow_dispatch from a branch there is no tag to check.
+      - name: Check the tag and its changelog section
+        if: github.ref_type == 'tag'
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          set -eu
+          python3 tools/version.py --check-tag "$TAG"
+          python3 tools/changelog.py --section "${TAG#v}" > "$RUNNER_TEMP/release-notes.md"
+          cat "$RUNNER_TEMP/release-notes.md"
+
+      # The board build runs `npm ci` and `npm run build` in web/ itself
+      # (components/web_assets/CMakeLists.txt): the SPA is compiled into the firmware.
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      # The platform pin lives in platformio.ini, so the cache key is that file: bump the pin and
+      # the toolchain is fetched fresh rather than restored from under a different version.
+      - uses: actions/cache@v6.1.0
+        with:
+          path: ~/.platformio
+          key: pio-${{ runner.os }}-${{ hashFiles('platformio.ini') }}
+
+      - name: Install PlatformIO
+        run: pip install platformio==6.1.19
+
+      - name: Host tests
+        run: |
+          pio test -e native
+          python -m pip install pytest
+          python -m pytest tests/python -q
+
+      - name: Build the firmware
+        run: pio run -e m5stack-nanoc6
+
+      # make_release.py refuses any version that is not a release (a -dev pre-release, a
+      # .dirty build). On a tag the check above already proved the checkout is the tag, so a
+      # refusal here means the build itself wrote a tracked file -- worth failing on. A
+      # workflow_dispatch from a branch is not a release either; it assembles with
+      # --allow-unreleased so the artifact can still be inspected, and never reaches publish.
+      - name: Assemble dist/
+        env:
+          REF_TYPE: ${{ github.ref_type }}
+        run: |
+          if [ "$REF_TYPE" = "tag" ]; then
+            python tools/make_release.py
+          else
+            python tools/make_release.py --allow-unreleased
+          fi
+
+      - name: Check the version, then report the size
+        env:
+          REF_TYPE: ${{ github.ref_type }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          set -eu
+          version=$(jq -r '.version' dist/manifest.json)
+          # Positive control on the whole chain: the manifest's version is read out of the image
+          # itself, and on a tag it must BE the tag (the tag carries a `v`, SemVer does not). A
+          # mismatch is a stale build directory or a tag on a different commit -- either way the
+          # page would offer one thing and install another.
+          if [ "$REF_TYPE" = "tag" ] && [ "v$version" != "$TAG" ]; then
+            echo "::error::the image says '$version', the tag is '$TAG'"; exit 1
+          fi
+          # The OTA image, which is the app partition's contents -- the number that matters
+          # against the 1984 KiB slot. Not the sum of the parts.
+          ota="dist/comfoair-q-$version-ota.bin"
+          echo "m5stack-nanoc6 $version: $(wc -c < "$ota") bytes of 2031616" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload dist/
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: dist
+          path: dist
+          if-no-files-found: error
+
+      # Kept out of dist/: everything in dist/ is the Pages site and a release asset.
+      - name: Upload the release notes
+        if: github.ref_type == 'tag'
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: release-notes
+          path: ${{ runner.temp }}/release-notes.md
+          if-no-files-found: error
+
+  publish:
+    name: Release and stage the site
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref_type == 'tag'
+    permissions:
+      contents: write # to create the release and upload to it
+    steps:
+      - uses: actions/download-artifact@v8.0.1
+        with:
+          name: dist
+          path: dist
+
+      - uses: actions/download-artifact@v8.0.1
+        with:
+          name: release-notes
+          path: notes
+
+      - name: Upload the pages artifact
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: dist
+
+      - name: Attach the files to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          set -eu
+          # A tag push does not create a release; it has to be asked for. `view` first so that
+          # re-running this workflow on an existing tag adds to that release instead of failing;
+          # on a re-run the notes are rewritten from CHANGELOG.md, which is their source.
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --title "$TAG" --notes-file notes/release-notes.md
+          else
+            gh release edit "$TAG" --notes-file notes/release-notes.md
+          fi
+          # --clobber so a re-run replaces assets instead of erroring on the second upload.
+          gh release upload "$TAG" dist/* --clobber
+
+  deploy:
+    name: Publish to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: publish
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v6.0.0
+      - id: deployment
+        uses: actions/deploy-pages@v5.0.1

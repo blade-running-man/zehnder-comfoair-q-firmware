@@ -1,0 +1,112 @@
+/* The cybercore palette of the docs site: the device web UI's tokens
+   (web/src/styles/global.css) mapped onto VitePress's --vp-* variables, plus the --cy-*
+   values cyber.css draws its glows and canvas with. The hex values are copies of the SPA's;
+   when the SPA's palette changes, change them here too -- nothing ties the two together.
+   VitePress's light theme is :root and its dark theme is the .dark class on <html>. */
+
+/* ── Light theme (synthwave on paper). VitePress's :root is its light theme.
+   Magenta/cyan/green are the SPA's AA-darkened values (4.5:1 on white). ── */
+:root {
+  --cy-accent:  #c8104f;
+  --cy-cyan:    #067884;
+  --cy-bg-grad: radial-gradient(135% 90% at 50% 0%, #ffffff 0%, #f4f5fa 55%);
+  --cy-scanline: rgba(0, 0, 0, 0.04);
+  --cy-glow-accent: 0 0 6px rgba(200, 16, 79, 0.28);
+  --cy-glow-cyan:   0 0 6px rgba(6, 120, 132, 0.28);
+
+  --vp-c-bg:      #f4f5fa;
+  --vp-c-bg-alt:  #ece9f5;
+  --vp-c-bg-soft: #ffffff;
+  --vp-c-bg-elv:  #ffffff;
+  --vp-c-border:  #b3adcf;
+  --vp-c-divider: #d7d3e6;
+  --vp-c-gutter:  #d7d3e6;
+
+  --vp-c-text-1: #14141c;
+  --vp-c-text-2: #4a4a5e;
+  --vp-c-text-3: #7a7a90;
+
+  --vp-c-brand-1: #c8104f;
+  --vp-c-brand-2: #a50d41;
+  --vp-c-brand-3: #c8104f;
+  --vp-c-brand-soft: rgba(200, 16, 79, 0.12);
+
+  --vp-c-tip-1: #067884;
+  --vp-c-tip-2: #05616b;
+  --vp-c-tip-3: #067884;
+  --vp-c-tip-soft: rgba(6, 120, 132, 0.10);
+
+  --vp-c-success-1: #0a7a4a;
+  --vp-c-success-2: #08633c;
+  --vp-c-success-3: #0a7a4a;
+  --vp-c-success-soft: rgba(10, 122, 74, 0.12);
+
+  --vp-c-warning-1: #8a6d00;
+  --vp-c-warning-2: #735b00;
+  --vp-c-warning-3: #8a6d00;
+  --vp-c-warning-soft: rgba(138, 109, 0, 0.12);
+
+  --vp-c-danger-1: #c01038;
+  --vp-c-danger-2: #a00d2f;
+  --vp-c-danger-3: #c01038;
+  --vp-c-danger-soft: rgba(192, 16, 56, 0.12);
+
+  --vp-code-color: #067884;
+  --vp-code-block-bg: #ece9f5;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-active-text: #ffffff;
+}
+
+/* ── Dark theme (the SPA's default). ───────────────────────────────────── */
+.dark {
+  --cy-accent:  #ff2a6d;
+  --cy-cyan:    #00f0ff;
+  --cy-bg-grad: radial-gradient(135% 90% at 50% 0%, #16161f 0%, #0a0a0f 55%);
+  --cy-scanline: rgba(0, 0, 0, 0.14);
+  --cy-glow-accent: 0 0 8px rgba(255, 42, 109, 0.55), 0 0 18px rgba(255, 42, 109, 0.30);
+  --cy-glow-cyan:   0 0 8px rgba(0, 240, 255, 0.55), 0 0 18px rgba(0, 240, 255, 0.30);
+
+  --vp-c-bg:      #0a0a0f;
+  --vp-c-bg-alt:  #08080d;
+  --vp-c-bg-soft: #14141c;
+  --vp-c-bg-elv:  #14141c;
+  --vp-c-border:  #3a3a52;
+  --vp-c-divider: #262636;
+  --vp-c-gutter:  #08080d;
+
+  --vp-c-text-1: #e8f7ff;
+  --vp-c-text-2: #96a7bd;
+  --vp-c-text-3: #6a7182;
+
+  --vp-c-brand-1: #ff2a6d;
+  --vp-c-brand-2: #ff5b8d;
+  --vp-c-brand-3: #ff2a6d;
+  --vp-c-brand-soft: rgba(255, 42, 109, 0.16);
+
+  --vp-c-tip-1: #00f0ff;
+  --vp-c-tip-2: #66f6ff;
+  --vp-c-tip-3: #00c8d6;
+  --vp-c-tip-soft: rgba(0, 240, 255, 0.10);
+
+  --vp-c-success-1: #05ffa1;
+  --vp-c-success-2: #5cffc3;
+  --vp-c-success-3: #04cc81;
+  --vp-c-success-soft: rgba(5, 255, 161, 0.12);
+
+  --vp-c-warning-1: #fcee0a;
+  --vp-c-warning-2: #fdf35c;
+  --vp-c-warning-3: #c9be08;
+  --vp-c-warning-soft: rgba(252, 238, 10, 0.10);
+
+  --vp-c-danger-1: #ff4060;
+  --vp-c-danger-2: #ff6b85;
+  --vp-c-danger-3: #ff4060;
+  --vp-c-danger-soft: rgba(255, 64, 96, 0.14);
+
+  --vp-code-color: #00f0ff;
+  --vp-code-block-bg: #08080d;
+  --vp-button-brand-text: #0a0a0f;
+  --vp-button-brand-hover-text: #0a0a0f;
+  --vp-button-brand-active-text: #0a0a0f;
+}

@@ -1,0 +1,39 @@
+zehnder-comfoair-q-firmware
+Copyright (c) 2026 Oleksandr Slukovskyi (@blade-running-man)
+
+Released under the MIT licence; see LICENSE. If you use this work, keep the
+copyright notice with it -- that is the one condition the licence attaches.
+
+
+--------------------------------------------------------------------------------
+1. Where the web UI came from, and why it is MIT here
+--------------------------------------------------------------------------------
+
+Everything under `web/` began as the front end of Svitrix, the same author's
+firmware for the Ulanzi TC001, which is published under CC BY-NC-SA 4.0 -- a
+licence Svitrix inherited from AWTRIX 3, the project it forked.
+
+That licence does not follow the code into this repository, because the code is
+not AWTRIX 3's. Svitrix's front end is an independent Preact + Vite + TypeScript
+single-page application with CSS modules and signals; AWTRIX 3 serves a
+hand-written page through esp-fs-webserver and ships no such application. The
+two share no source. The copyright holder is the same person in both projects
+and has relicensed this half as MIT.
+
+Nothing else from Svitrix is present. Its firmware, libraries, tests and build
+tooling were removed rather than ported.
+
+
+--------------------------------------------------------------------------------
+2. Bundled third-party material -- attribution REQUIRED
+--------------------------------------------------------------------------------
+
+The PDFs under `docs/manuals/` are not covered by the MIT licence. They are
+unmodified copies kept so that the page citations in `docs/` can be checked
+offline:
+
+  * Zehnder ComfoAir Q and ComfoConnect Pro manuals and the ComfoAir Q brochure
+    -- Copyright Zehnder Group.
+
+  * M5Stack product pages (NanoC6, AtomS3, Unit Mini CAN, Atomic CAN Base),
+    printed to PDF from docs.m5stack.com -- Copyright M5Stack Technology Co., Ltd.

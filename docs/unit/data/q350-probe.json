@@ -1,0 +1,8704 @@
+{
+  "state": "done",
+  "failure": null,
+  "node": 1,
+  "another_counter": 0,
+  "elapsed_ms": 118040,
+  "progress": {
+    "requests": 4226,
+    "timeouts": 0,
+    "node": 1,
+    "unit": 0,
+    "subunit": 0,
+    "property": 0
+  },
+  "nodes_seen": [
+    1
+  ],
+  "units": [
+    {
+      "node": 1,
+      "unit": 1,
+      "name": "NODE",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 49
+    },
+    {
+      "node": 1,
+      "unit": 2,
+      "name": "COMFOBUS",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 58
+    },
+    {
+      "node": 1,
+      "unit": 3,
+      "name": "ERROR",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 62
+    },
+    {
+      "node": 1,
+      "unit": 4,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 5,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 6,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 7,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 8,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 9,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 10,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 11,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 12,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 13,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 14,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 15,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 16,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 17,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 18,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 19,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 20,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "name": "SCHEDULE",
+      "status": "present",
+      "subunits": 10,
+      "absent_properties": 610
+    },
+    {
+      "node": 1,
+      "unit": 22,
+      "name": "VALVE",
+      "status": "present",
+      "subunits": 2,
+      "absent_properties": 120
+    },
+    {
+      "node": 1,
+      "unit": 23,
+      "name": "FAN",
+      "status": "present",
+      "subunits": 2,
+      "absent_properties": 122
+    },
+    {
+      "node": 1,
+      "unit": 24,
+      "name": "POWERSENSOR",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 62
+    },
+    {
+      "node": 1,
+      "unit": 25,
+      "name": "PREHEATER",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 58
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "name": "HMI",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 54
+    },
+    {
+      "node": 1,
+      "unit": 27,
+      "name": "RFCOMMUNICATION",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 57
+    },
+    {
+      "node": 1,
+      "unit": 28,
+      "name": "FILTER",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 60
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "name": "TEMPHUMCONTROL",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 50
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "name": "VENTILATIONCONFIG",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 32
+    },
+    {
+      "node": 1,
+      "unit": 31,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "name": "NODECONFIGURATION",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 52
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "name": "TEMPERATURESENSOR",
+      "status": "present",
+      "subunits": 6,
+      "absent_properties": 366
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "name": "HUMIDITYSENSOR",
+      "status": "present",
+      "subunits": 6,
+      "absent_properties": 366
+    },
+    {
+      "node": 1,
+      "unit": 35,
+      "name": "PRESSURESENSOR",
+      "status": "present",
+      "subunits": 2,
+      "absent_properties": 122
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "name": "PERIPHERALS",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 52
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "name": "ANALOGINPUT",
+      "status": "present",
+      "subunits": 4,
+      "absent_properties": 220
+    },
+    {
+      "node": 1,
+      "unit": 38,
+      "name": "COOKERHOOD",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 62
+    },
+    {
+      "node": 1,
+      "unit": 39,
+      "name": "POSTHEATER",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 59
+    },
+    {
+      "node": 1,
+      "unit": 40,
+      "name": "COMFOFOND",
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 62
+    },
+    {
+      "node": 1,
+      "unit": 41,
+      "name": null,
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 62
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "name": null,
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 45
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "name": null,
+      "status": "present",
+      "subunits": 8,
+      "absent_properties": 440
+    },
+    {
+      "node": 1,
+      "unit": 44,
+      "name": null,
+      "status": "present",
+      "subunits": 1,
+      "absent_properties": 62
+    },
+    {
+      "node": 1,
+      "unit": 45,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 46,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    },
+    {
+      "node": 1,
+      "unit": 47,
+      "name": null,
+      "status": "absent",
+      "subunits": 0,
+      "absent_properties": 0
+    }
+  ],
+  "properties": [
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 4,
+      "name": "Serial number",
+      "access": "ro",
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "redacted": true
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "06",
+        "len": 1,
+        "number": 6,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 6,
+      "name": "Firmware version",
+      "access": "ro",
+      "format": "version",
+      "unit_label": null,
+      "value": {
+        "hex": "002c10c0",
+        "len": 4,
+        "number": 3222285312,
+        "text": "R1.11.0",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "u32",
+      "unit_label": null,
+      "value": {
+        "hex": "009410c0",
+        "len": 4,
+        "number": 3222311936,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 8,
+      "name": "Model",
+      "access": "ro",
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "436f6d666f4169722051333530204e4c205220565620535400",
+        "len": 25,
+        "number": null,
+        "text": "ComfoAir Q350 NL R VV ST",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u32",
+      "unit_label": null,
+      "value": {
+        "hex": "04000000",
+        "len": 4,
+        "number": 4,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 10,
+      "name": null,
+      "access": null,
+      "format": "u32",
+      "unit_label": null,
+      "value": {
+        "hex": "00006041",
+        "len": 4,
+        "number": 1096810496,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 11,
+      "name": "Article number",
+      "access": "ro",
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "34373135303230353700",
+        "len": 10,
+        "number": null,
+        "text": "471502057",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 12,
+      "name": null,
+      "access": null,
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "4e554c4c00",
+        "len": 5,
+        "number": null,
+        "text": "NULL",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 13,
+      "name": "Country",
+      "access": "ro",
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "4e4c00",
+        "len": 3,
+        "number": null,
+        "text": "NL",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 1,
+      "subunit": 1,
+      "property": 20,
+      "name": "Unit name",
+      "access": "ro",
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "436f6d666f416972205100",
+        "len": 11,
+        "number": null,
+        "text": "ComfoAir Q",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 2,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 2,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 2,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 2,
+      "subunit": 1,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 2,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u32",
+      "unit_label": null,
+      "value": {
+        "hex": "000010c0",
+        "len": 4,
+        "number": 3222274048,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 3,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 2,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 2,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "02",
+        "len": 1,
+        "number": 2,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 3,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 3,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "03",
+        "len": 1,
+        "number": 3,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 4,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 4,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "04",
+        "len": 1,
+        "number": 4,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 5,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 5,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "05",
+        "len": 1,
+        "number": 5,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 6,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 6,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "06",
+        "len": 1,
+        "number": 6,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 7,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 7,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "07",
+        "len": 1,
+        "number": 7,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 8,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 8,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "08",
+        "len": 1,
+        "number": 8,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 9,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 9,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "09",
+        "len": 1,
+        "number": 9,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 10,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 21,
+      "subunit": 10,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "0a",
+        "len": 1,
+        "number": 10,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 22,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 22,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "e803",
+        "len": 2,
+        "number": 1000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 22,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "3130302e3000",
+        "len": 6,
+        "number": null,
+        "text": "100.0",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 22,
+      "subunit": 2,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 22,
+      "subunit": 2,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "e803",
+        "len": 2,
+        "number": 1000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 22,
+      "subunit": 2,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "3130302e3000",
+        "len": 6,
+        "number": null,
+        "text": "100.0",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 23,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 23,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 23,
+      "subunit": 2,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 23,
+      "subunit": 2,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 24,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 25,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 25,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 25,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 25,
+      "subunit": 1,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 25,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "46",
+        "len": 1,
+        "number": 70,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0a64",
+        "len": 2,
+        "min": 10,
+        "max": 100
+      },
+      "step": {
+        "hex": "05",
+        "len": 1,
+        "number": 5,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "454e474c49534800",
+        "len": 8,
+        "number": null,
+        "text": "ENGLISH",
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 26,
+      "subunit": 1,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": null,
+      "unit_label": null,
+      "value": {
+        "error": 53,
+        "error_name": "unknown",
+        "hex": "35"
+      },
+      "range": null,
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 27,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 27,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 27,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 27,
+      "subunit": 1,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0002",
+        "len": 2,
+        "min": 0,
+        "max": 2
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 27,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 27,
+      "subunit": 1,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 28,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 28,
+      "subunit": 1,
+      "property": 2,
+      "name": "Filter pre-warning period",
+      "access": null,
+      "format": "u8",
+      "unit_label": "days",
+      "value": {
+        "hex": "1500",
+        "len": 2,
+        "number": null,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": null,
+        "max": null
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": null,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 28,
+      "subunit": 1,
+      "property": 3,
+      "name": "Filter lifetime",
+      "access": "rw",
+      "format": "u16",
+      "unit_label": "days",
+      "value": {
+        "hex": "b400",
+        "len": 2,
+        "number": 180,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": 65535
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 2,
+      "name": "Heating limit RMOT",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "°C",
+      "value": {
+        "hex": "6e00",
+        "len": 2,
+        "number": 11.0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00009600",
+        "len": 4,
+        "min": 0.0,
+        "max": 15.0
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 1.0,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 3,
+      "name": "Cooling limit RMOT",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "°C",
+      "value": {
+        "hex": "e400",
+        "len": 2,
+        "number": 22.8,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "96009001",
+        "len": 4,
+        "min": 15.0,
+        "max": 40.0
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 1.0,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 4,
+      "name": "Temperature passive",
+      "access": "rw",
+      "format": "enum",
+      "unit_label": null,
+      "value": {
+        "hex": "02",
+        "len": 1,
+        "number": 2,
+        "text": null,
+        "label": "on"
+      },
+      "range": {
+        "hex": "0002",
+        "len": 2,
+        "min": 0,
+        "max": 2
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": "rw",
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0002",
+        "len": 2,
+        "min": 0,
+        "max": 2
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 6,
+      "name": "Humidity comfort",
+      "access": "rw",
+      "format": "enum",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": "off"
+      },
+      "range": {
+        "hex": "0002",
+        "len": 2,
+        "min": 0,
+        "max": 2
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 7,
+      "name": "Humidity protection",
+      "access": "rw",
+      "format": "enum",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": "off"
+      },
+      "range": {
+        "hex": "0002",
+        "len": 2,
+        "min": 0,
+        "max": 2
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 8,
+      "name": "Temperature profile mode",
+      "access": "rw",
+      "format": "enum",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": "fixed"
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 10,
+      "name": "Target temperature, warm profile",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "°C",
+      "value": {
+        "hex": "e600",
+        "len": 2,
+        "number": 23.0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "e6002101",
+        "len": 4,
+        "min": 23.0,
+        "max": 28.9
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 1.0,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 11,
+      "name": "Target temperature, normal profile",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "°C",
+      "value": {
+        "hex": "c800",
+        "len": 2,
+        "number": 20.0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "bd00e900",
+        "len": 4,
+        "min": 18.9,
+        "max": 23.3
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 1.0,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 12,
+      "name": "Target temperature, cool profile",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "°C",
+      "value": {
+        "hex": "be00",
+        "len": 2,
+        "number": 19.0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "b200be00",
+        "len": 4,
+        "min": 17.8,
+        "max": 19.0
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 1.0,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 13,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 29,
+      "subunit": 1,
+      "property": 14,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0002",
+        "len": 2,
+        "min": 0,
+        "max": 2
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "0f",
+        "len": 1,
+        "number": 15,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 3,
+      "name": "Airflow preset away",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "m³/h",
+      "value": {
+        "hex": "3c00",
+        "len": 2,
+        "number": 60,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "3c005a00",
+        "len": 4,
+        "min": 60,
+        "max": 90
+      },
+      "step": {
+        "hex": "0500",
+        "len": 2,
+        "number": 5,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 4,
+      "name": "Airflow preset low",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "m³/h",
+      "value": {
+        "hex": "5a00",
+        "len": 2,
+        "number": 90,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "3c009600",
+        "len": 4,
+        "min": 60,
+        "max": 150
+      },
+      "step": {
+        "hex": "0500",
+        "len": 2,
+        "number": 5,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 5,
+      "name": "Airflow preset medium",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "m³/h",
+      "value": {
+        "hex": "9600",
+        "len": 2,
+        "number": 150,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "3c004501",
+        "len": 4,
+        "min": 60,
+        "max": 325
+      },
+      "step": {
+        "hex": "0500",
+        "len": 2,
+        "number": 5,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 6,
+      "name": "Airflow preset high",
+      "access": "rw",
+      "format": "i16",
+      "unit_label": "m³/h",
+      "value": {
+        "hex": "ff00",
+        "len": 2,
+        "number": 255,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "96004501",
+        "len": 4,
+        "min": 150,
+        "max": 325
+      },
+      "step": {
+        "hex": "0500",
+        "len": 2,
+        "number": 5,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 7,
+      "name": "Altitude",
+      "access": null,
+      "format": "enum",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": "0-500m"
+      },
+      "range": {
+        "hex": "0003",
+        "len": 2,
+        "min": 0,
+        "max": 3
+      },
+      "step": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "4501",
+        "len": 2,
+        "number": 325,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 9,
+      "name": "Ventilation control mode",
+      "access": null,
+      "format": "enum",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": "flow_control"
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 10,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "ecff",
+        "len": 2,
+        "number": -20,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "19fce803",
+        "len": 4,
+        "min": -999,
+        "max": 1000
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 11,
+      "name": "Bathroom switch activation delay",
+      "access": null,
+      "format": "i16",
+      "unit_label": "s",
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 12,
+      "name": "Bathroom switch deactivation delay",
+      "access": null,
+      "format": "u8",
+      "unit_label": "min",
+      "value": {
+        "hex": "1e",
+        "len": 1,
+        "number": 30,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 13,
+      "name": "Bathroom switch mode",
+      "access": null,
+      "format": "enum",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": "fixed"
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 14,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "03",
+        "len": 1,
+        "number": 3,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0103",
+        "len": 2,
+        "min": 1,
+        "max": 3
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 15,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 17,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "c800",
+        "len": 2,
+        "number": 200,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00000000",
+        "len": 4,
+        "min": 0,
+        "max": 0
+      },
+      "step": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 18,
+      "name": "Unbalance",
+      "access": null,
+      "format": "i16",
+      "unit_label": "%",
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0.0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "6aff9600",
+        "len": 4,
+        "min": -15.0,
+        "max": 15.0
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 0.1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 19,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 20,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 21,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a0a",
+        "len": 2,
+        "number": 2586,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 22,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "7b08",
+        "len": 2,
+        "number": 2171,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 23,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 24,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 25,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "8e05",
+        "len": 2,
+        "number": 1422,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 26,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "8a04",
+        "len": 2,
+        "number": 1162,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 27,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "4a03",
+        "len": 2,
+        "number": 842,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 28,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "6d03",
+        "len": 2,
+        "number": 877,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 29,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d502",
+        "len": 2,
+        "number": 725,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 30,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "5f02",
+        "len": 2,
+        "number": 607,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 31,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "4501",
+        "len": 2,
+        "number": 325,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 30,
+      "subunit": 1,
+      "property": 32,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 3,
+      "name": "Maintainer password",
+      "access": null,
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "redacted": true
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 4,
+      "name": "Orientation",
+      "access": null,
+      "format": "enum",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": "right"
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0002",
+        "len": 2,
+        "min": 0,
+        "max": 2
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 10,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0002",
+        "len": 2,
+        "min": 0,
+        "max": 2
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 11,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "03",
+        "len": 1,
+        "number": 3,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0103",
+        "len": 2,
+        "min": 1,
+        "max": 3
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 12,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 32,
+      "subunit": 1,
+      "property": 13,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 2,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 2,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 3,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 3,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 4,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 4,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 5,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 5,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 6,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 33,
+      "subunit": 6,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 2,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 2,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 3,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 3,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 4,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 4,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 5,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 5,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 6,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 34,
+      "subunit": 6,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 35,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 35,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 35,
+      "subunit": 2,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 35,
+      "subunit": 2,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 10,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 36,
+      "subunit": 1,
+      "property": 11,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "64",
+        "len": 1,
+        "number": 100,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 1,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 1,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "64",
+        "len": 1,
+        "number": 100,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "01fa",
+        "len": 2,
+        "min": 1,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 1,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 1,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 2,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 2,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 2,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "64",
+        "len": 1,
+        "number": 100,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 2,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 2,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 2,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "64",
+        "len": 1,
+        "number": 100,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "01fa",
+        "len": 2,
+        "min": 1,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 2,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 2,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 3,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 3,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 3,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "64",
+        "len": 1,
+        "number": 100,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 3,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 3,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 3,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "64",
+        "len": 1,
+        "number": 100,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "01fa",
+        "len": 2,
+        "min": 1,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 3,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 3,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 4,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 4,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 4,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "64",
+        "len": 1,
+        "number": 100,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 4,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0001",
+        "len": 2,
+        "min": 0,
+        "max": 1
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 4,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0064",
+        "len": 2,
+        "min": 0,
+        "max": 100
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 4,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "64",
+        "len": 1,
+        "number": 100,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "01fa",
+        "len": 2,
+        "min": 1,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 4,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 37,
+      "subunit": 4,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 38,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 39,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 39,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "string",
+      "unit_label": null,
+      "value": {
+        "hex": "6400",
+        "len": 2,
+        "number": null,
+        "text": "d",
+        "label": null
+      },
+      "range": {
+        "hex": "32009600",
+        "len": 4,
+        "min": null,
+        "max": null
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": null,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 39,
+      "subunit": 1,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "b400",
+        "len": 2,
+        "number": 180,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "3c005802",
+        "len": 4,
+        "min": 60,
+        "max": 600
+      },
+      "step": {
+        "hex": "3c00",
+        "len": 2,
+        "number": 60,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 39,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "64000802",
+        "len": 4,
+        "min": 100,
+        "max": 520
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 40,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 41,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 4,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "0000",
+        "len": 2,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000ffff",
+        "len": 4,
+        "min": 0,
+        "max": -1
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 10,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 11,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 12,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 13,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 14,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 15,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 16,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 17,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 42,
+      "subunit": 1,
+      "property": 18,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "70fe",
+        "len": 2,
+        "number": -400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0080ff7f",
+        "len": 4,
+        "min": -32768,
+        "max": 32767
+      },
+      "step": {
+        "hex": "0100",
+        "len": 2,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 1,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d007",
+        "len": 2,
+        "number": 2000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 1,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "9001",
+        "len": 2,
+        "number": 400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 1,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a04",
+        "len": 2,
+        "number": 1050,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 1,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00fa",
+        "len": 2,
+        "min": 0,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 1,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 1,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 1,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 2,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "02",
+        "len": 1,
+        "number": 2,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 2,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d007",
+        "len": 2,
+        "number": 2000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 2,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "9001",
+        "len": 2,
+        "number": 400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 2,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a04",
+        "len": 2,
+        "number": 1050,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 2,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00fa",
+        "len": 2,
+        "min": 0,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 2,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 2,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 2,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 3,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "04",
+        "len": 1,
+        "number": 4,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 3,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d007",
+        "len": 2,
+        "number": 2000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 3,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "9001",
+        "len": 2,
+        "number": 400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 3,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a04",
+        "len": 2,
+        "number": 1050,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 3,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00fa",
+        "len": 2,
+        "min": 0,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 3,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 3,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 3,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 4,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "08",
+        "len": 1,
+        "number": 8,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 4,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d007",
+        "len": 2,
+        "number": 2000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 4,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "9001",
+        "len": 2,
+        "number": 400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 4,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a04",
+        "len": 2,
+        "number": 1050,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 4,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00fa",
+        "len": 2,
+        "min": 0,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 4,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 4,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 4,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 5,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "10",
+        "len": 1,
+        "number": 16,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 5,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d007",
+        "len": 2,
+        "number": 2000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 5,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "9001",
+        "len": 2,
+        "number": 400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 5,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a04",
+        "len": 2,
+        "number": 1050,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 5,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00fa",
+        "len": 2,
+        "min": 0,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 5,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 5,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 5,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 6,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "20",
+        "len": 1,
+        "number": 32,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 6,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d007",
+        "len": 2,
+        "number": 2000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 6,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "9001",
+        "len": 2,
+        "number": 400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 6,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a04",
+        "len": 2,
+        "number": 1050,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 6,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00fa",
+        "len": 2,
+        "min": 0,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 6,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 6,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 6,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 7,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "40",
+        "len": 1,
+        "number": 64,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 7,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d007",
+        "len": 2,
+        "number": 2000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 7,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "9001",
+        "len": 2,
+        "number": 400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 7,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a04",
+        "len": 2,
+        "number": 1050,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 7,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00fa",
+        "len": 2,
+        "min": 0,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 7,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 7,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 7,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 8,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "80",
+        "len": 1,
+        "number": 128,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 8,
+      "property": 2,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "d007",
+        "len": 2,
+        "number": 2000,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 8,
+      "property": 3,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "9001",
+        "len": 2,
+        "number": 400,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 8,
+      "property": 5,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "1a04",
+        "len": 2,
+        "number": 1050,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "0000d007",
+        "len": 4,
+        "min": 0,
+        "max": 2000
+      },
+      "step": {
+        "hex": "3200",
+        "len": 2,
+        "number": 50,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 8,
+      "property": 6,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "32",
+        "len": 1,
+        "number": 50,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00fa",
+        "len": 2,
+        "min": 0,
+        "max": 250
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 8,
+      "property": 7,
+      "name": null,
+      "access": null,
+      "format": "i16",
+      "unit_label": null,
+      "value": {
+        "hex": "2c01",
+        "len": 2,
+        "number": 300,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "1e00201c",
+        "len": 4,
+        "min": 30,
+        "max": 7200
+      },
+      "step": {
+        "hex": "0a00",
+        "len": 2,
+        "number": 10,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 8,
+      "property": 8,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "error": 15,
+        "error_name": "no_range",
+        "hex": "0f"
+      },
+      "step": null
+    },
+    {
+      "node": 1,
+      "unit": 43,
+      "subunit": 8,
+      "property": 9,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "00",
+        "len": 1,
+        "number": 0,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    },
+    {
+      "node": 1,
+      "unit": 44,
+      "subunit": 1,
+      "property": 1,
+      "name": null,
+      "access": null,
+      "format": "u8",
+      "unit_label": null,
+      "value": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      },
+      "range": {
+        "hex": "00ff",
+        "len": 2,
+        "min": 0,
+        "max": 255
+      },
+      "step": {
+        "hex": "01",
+        "len": 1,
+        "number": 1,
+        "text": null,
+        "label": null
+      }
+    }
+  ],
+  "active_errors": {
+    "hex": "0000000000000000000000000000000000000000000000000000000000000000",
+    "ids": []
+  },
+  "truncated": false
+}

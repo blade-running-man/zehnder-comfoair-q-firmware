@@ -1,0 +1,24 @@
+.guide { margin-top: 30px; }
+.h2 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; margin: 0 0 3px; }
+.lede { margin: 0 0 16px; color: var(--text-dim); font-size: 13px; max-width: 42rem; text-wrap: pretty; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 12px; }
+.item {
+  clip-path: var(--razor-sm); box-shadow: inset 0 0 0 1px var(--border); padding: 13px 15px;
+  background: color-mix(in srgb, var(--bg-card) 45%, transparent);
+}
+.item h3 { font-size: 13px; font-weight: 700; margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
+.pip { width: 8px; height: 8px; border-radius: 2px; flex: none; background: var(--accent); box-shadow: var(--glow-accent); }
+.item p { margin: 0; font-size: 12.5px; color: var(--text-dim); text-wrap: pretty; line-height: 1.45; }
+
+.about { margin-top: 22px; border-top: 1px solid var(--border); padding-top: 14px; }
+.about > summary {
+  cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-family: var(--mono);
+  color: var(--text-faint); list-style: none; display: inline-flex; align-items: center; gap: 7px;
+}
+.about > summary::-webkit-details-marker { display: none; }
+.about > summary::before { content: "▸"; transition: transform .18s var(--ease-out); font-size: 9px; }
+.about[open] > summary::before { transform: rotate(90deg); }
+.about dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 12px 0 0; font-size: 12.5px; }
+.about dt { font-weight: 700; color: var(--text-dim); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; font-family: var(--mono); white-space: nowrap; padding-top: 3px; }
+.about dd { margin: 0; text-wrap: pretty; color: var(--text-dim); }
+.about dd strong { color: var(--text); font-weight: 600; }

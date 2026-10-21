@@ -1,0 +1,66 @@
+# Partition table: partitions.csv, our own -- two 1984 KiB OTA slots with ota_0 at 0x10000
+# on a 4 MB part, 64 KiB spare; why the stock table does not fit is in its header, the
+# layout in docs/device/ota-and-system.md. There is no filesystem partition: the web UI
+# is compiled in (EMBED_FILES, components/web_assets).
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# WebSocket support in esp_http_server defaults to n (esp_http_server/Kconfig:47-51).
+# Without this line the WS handlers do not fail to build -- they simply are not
+# compiled, and the absence shows up as a missing feature.
+CONFIG_HTTPD_WS_SUPPORT=y
+# The handshake callbacks are deliberately NOT enabled. They looked like the way to apply
+# the access policy to /ws, but the sockets can be discovered with httpd_get_client_list()
+# plus httpd_ws_get_fd_info() instead, which needs no Kconfig option and also drops a closed
+# tab on its own. What remains unsolved is authorising the upgrade itself once a password
+# exists -- see the note in comfoair_http_ws.c; phase 5 owes that a ticket.
+
+# lwIP's socket table, shared by EVERY socket in the firmware -- NOT the IDF default of 10.
+# 13 = esp_http_server's 7 client sockets (cfg.max_open_sockets, comfoair_http.c)
+#    + its 3 internal ones (listen, control, control-send)
+#    + 1 MQTT broker connection (comfoair_mqtt_client.c)
+#    + 1 captive DNS responder (comfoair_captive_dns_server.c; up in AP+STA alongside MQTT)
+#    + 1 spare.
+# At 10 the table ran out at the seventh browser connection, before httpd's LRU purge could run,
+# and every new connection failed with "httpd_accept_conn: error in accept (23)" (ENFILE) until a
+# client let go. The terms live in components/comfoair_http/comfoair_http_sockets.h; a
+# _Static_assert in comfoair_http.c and tests/python/test_socket_budget.py fail the build and the
+# suite if they stop fitting. Cost: lwIP allocates netconns from the heap on demand
+# (MEMP_MEM_MALLOC), so the three extra slots cost static RAM only for the descriptor array --
+# measured at 184 bytes on the m5stack-nanoc6 build, 10 -> 13.
+# An existing sdkconfig.m5stack-nanoc6 follows this line by itself while its old 10 is marked
+# "# default:"; a value set by hand overrides it and the _Static_assert stops the build until the
+# generated file is deleted -- docs/development/building.md.
+CONFIG_LWIP_MAX_SOCKETS=13
+
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+
+# espressif/mdns defaults to ten service slots (managed_components/espressif__mdns/Kconfig:11-17)
+# and every slot exists whether or not it is used. This firmware registers exactly one --
+# `_http._tcp` -- and the second is held for a `_comfoair._tcp` that is added only when a named
+# client browses for it. v1 has none: Home Assistant comes in over MQTT discovery, not mDNS.
+CONFIG_MDNS_MAX_SERVICES=2
+# CONFIG_MDNS_ADD_MAC_TO_HOSTNAME is deliberately NOT set here, and it is not an omission: the
+# option does not exist in this component at all. It lives only in the mdns component's own test
+# app (managed_components/espressif__mdns/tests/test_apps/main/Kconfig.projbuild:27). Had it been
+# a real default, the host name would come out as `comfoair-a1b2-9c139ed48ae4` -- no longer the
+# name on the sticker and in the phone's Wi-Fi list, which is the whole point of the mDNS name.
+# Browsing and the console CLI are both default-y in that component, and NOTHING IN THIS FIRMWARE
+# USES EITHER. Turning them off is worth 6 016 B of flash, but that is the smaller half of the
+# reason. mdns_receive.c calls mdns_priv_browse_result_add_ptr/_srv/_txt/_ip while parsing an
+# INCOMING packet (mdns_receive.c:881, :982, :1065, :1144), so with browsing compiled in, every
+# multicast from anybody on the link is walked into browse structures with heap allocations behind
+# it -- and "anybody on the link" here includes whoever has just associated with the open setup
+# access point (comfoair_net_radio.c, WIFI_AUTH_OPEN). Reachable code driven by an unauthenticated
+# radio, serving a feature we do not have, is the thing being removed; the bytes are a bonus.
+CONFIG_MDNS_ENABLE_BROWSE=n
+CONFIG_MDNS_ENABLE_CONSOLE_CLI=n
+
+# Rollback of an OTA image that crashes or boot-loops before comfoair_ota_runtime confirms it
+# (30 s after the HTTP server starts). The flag is compiled into the BOOTLOADER
+# (bootloader_utility.c:396-405, 446-451), and an OTA only ever replaces the app slot -- so the
+# first build carrying this line must be flashed over USB, bootloader included; until then uploads
+# work but nothing can roll back. DO NOT add CONFIG_BOOTLOADER_APP_ANTI_ROLLBACK: it burns eFuses
+# against downgrades, and the owner rolling back by hand is a supported path.
+CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE=y

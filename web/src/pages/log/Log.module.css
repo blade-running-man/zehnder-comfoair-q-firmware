@@ -1,0 +1,27 @@
+.page { display: flex; flex-direction: column; gap: 1rem; }
+.header { display: flex; align-items: center; justify-content: space-between; }
+.log {
+  margin: 0;
+  padding: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+  /* --surface does not exist (styles/global.css defines --bg-card and --bg-input, not it) --
+     using it here would always fall back to a flat, non-theme-aware value. --bg-input is the
+     token the rest of the app already uses for a recessed panel (global.css inputs, textareas),
+     and it is defined for both [data-theme] values Nav.tsx sets, so the ring reads as a panel
+     in both themes instead of one fixed shade in both. */
+  background: var(--bg-input);
+  border-radius: 6px;
+}
+/* A first draft had these as flat hex (#e5484d / #f5a524), which is ~3.4:1 and ~1.9:1
+   on the light theme's panel -- both fail AA at 0.8rem, on exactly the lines the owner opened
+   this page to read. global.css already solved this split for --danger (line 73 dark / 94
+   light) and --notice (line 78 dark / 97 light), with the same reasoning this page needs:
+   the brand orange/red pair that reads on the dark card does not read on the white one. */
+.error { color: var(--danger); }
+.warn  { color: var(--notice); }
+.info  { color: inherit; }
+.debug { opacity: 0.65; }

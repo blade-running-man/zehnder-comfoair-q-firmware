@@ -1,0 +1,29 @@
+.line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0 2px 14px;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.4rem;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+
+.denied { color: var(--notice); }
+.error { color: var(--brand); }
+
+/* The sentence itself reads at the page's ordinary weight; only the dot and the border carry the
+   tone's colour, so nothing here depends on being able to see it. */
+.text { color: var(--text); min-width: 0; }
+
+.what { font-weight: 600; }

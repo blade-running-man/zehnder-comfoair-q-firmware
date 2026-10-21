@@ -1,0 +1,54 @@
+.timer {
+  display: grid; gap: 10px 16px; padding: 15px 0;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  border-top: 1px solid var(--border);
+}
+.timer:first-child { border-top: none; padding-top: 4px; }
+@media (max-width: 700px) { .timer { grid-template-columns: 1fr; } }
+
+.name { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-weight: 600; font-size: 14px; }
+.what { margin: 3px 0 0; font-size: 12.5px; color: var(--text-dim); text-wrap: pretty; max-width: 34rem; }
+
+.set { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center; }
+.set button {
+  font: inherit; font-size: 12px; font-weight: 600; padding: 5px 10px; cursor: pointer;
+  border-radius: var(--r-pill); border: 1px solid var(--border); background: var(--bg-sunken); color: var(--text-dim);
+  transition: background .16s var(--ease-out), color .16s var(--ease-out),
+              border-color .16s var(--ease-out), transform .12s var(--ease-out);
+}
+.set button:active { transform: scale(.95); }
+.set button[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+/* The one start/stop in this card is a real command, not a length preset — give it the accent
+   outline so it reads as the actionable control among the quiet duration chips. */
+.toggleBtn { border-color: var(--accent); color: var(--accent); }
+@media (hover: hover) and (pointer: fine) {
+  .set button:hover { border-color: var(--accent); color: var(--accent); }
+}
+.fine { display: flex; align-items: center; gap: 6px; margin-left: 2px; }
+.fine input {
+  width: 5.5rem; font: inherit; font-size: 13px; font-variant-numeric: tabular-nums;
+  padding: 5px 9px; border-radius: var(--r); border: 1px solid var(--border);
+  background: var(--bg-sunken); color: var(--text); text-align: right; transition: border-color .16s var(--ease-out);
+}
+.fine input:focus { border-color: var(--accent); outline: none; }
+.unit { font-size: 12px; color: var(--text-faint); }
+.range { font-size: 11px; color: var(--text-faint); font-variant-numeric: tabular-nums; }
+
+.live {
+  border-radius: var(--r); border: 1px solid var(--border); background: var(--bg-sunken);
+  padding: 11px 12px; display: flex; gap: 11px; align-items: center; min-height: 66px;
+}
+.idle { border-style: dashed; }
+.ring { flex: none; width: 42px; height: 42px; color: var(--text); }
+.ring circle { fill: none; }
+.trk { stroke: currentColor; opacity: .18; }
+.val { stroke-linecap: round; transition: stroke-dashoffset .9s linear; }
+.txt { min-width: 0; }
+.lead { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.cap { font-size: 11px; color: var(--text-dim); margin-top: 1px; }
+.idle .lead { font-size: 13px; font-weight: 600; color: var(--text-dim); }
+
+@media (prefers-reduced-motion: reduce) {
+  .set button { transition: none; }
+  .val { transition: none; }
+}

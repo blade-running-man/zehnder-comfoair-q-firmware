@@ -1,0 +1,31 @@
+{
+  "name": "comfoair-q-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "//": "engines.node is the web gate's real floor: `npm test` runs the suites as plain .ts through node's own type stripping (scripts/test.mjs), which arrived in node 22.6. On an older node every suite dies with a syntax error and the runner reports `no tally` -- a red gate with nothing in it saying why.",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:mock": "vite --mode mock",
+    "build": "tsc -b && vite build",
+    "test": "node scripts/test.mjs",
+    "test:mock": "node scripts/test-mock.mjs",
+    "typecheck:mock": "tsc --noEmit -p mock/tsconfig.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.11.3",
+    "preact": "^11.0.1",
+    "preact-router": "^4.1.2",
+    "vite-plugin-compression2": "^2.5.3"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^24.12.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.4"
+  }
+}

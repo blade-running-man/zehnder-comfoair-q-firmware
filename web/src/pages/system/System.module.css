@@ -1,0 +1,90 @@
+/* The State page's name/value rows and the probe page's notices, unchanged: this page adds no
+   visual style of its own. */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.8125rem;
+}
+
+.notice {
+  margin-top: 12px;
+  padding: 8px 0 8px 12px;
+  border-inline-start: 3px solid var(--notice);
+  font-size: 0.8125rem;
+}
+
+.noticeDanger {
+  border-inline-start-color: var(--danger);
+}
+
+.grid {
+  display: grid;
+  /* Two columns where there is room, one where there is not. */
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.25rem 1.5rem;
+  margin: 12px 0 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.18);
+  min-width: 0;
+}
+
+.row dt {
+  opacity: 0.8;
+  /* May wrap: a long translated label must not push the value out of a phone-width card. */
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.row dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+  /* A 31-character serial must wrap inside its card at phone width, not widen the page. */
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+.warning { color: var(--notice); }
+.problem { color: var(--danger); }
+
+.errors {
+  margin-top: 16px;
+}
+
+.subTitle {
+  margin: 0 0 6px;
+  font-size: 0.9375rem;
+}
+
+.list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.list li + li {
+  margin-top: 4px;
+}

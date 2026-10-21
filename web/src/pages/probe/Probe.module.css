@@ -1,0 +1,190 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.8125rem;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.advanced {
+  margin-top: 12px;
+  font-size: 0.8125rem;
+}
+
+.advanced summary {
+  cursor: pointer;
+  color: var(--text-dim);
+}
+
+.advancedBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  max-width: 16rem;
+}
+
+/* The State page's status line, so "probing" reads like "live" does there. */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 12px;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  flex: none;
+  /* Never the only signal: the word beside it says the same thing. */
+  background: currentColor;
+}
+
+.running { color: var(--notice); }
+.done { color: var(--success); }
+.failed { color: var(--danger); }
+.idle { color: var(--text-faint); }
+
+.progress {
+  color: var(--text-dim);
+  font-size: 0.8125rem;
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+/* Leading-edge rule, neutral fill: the settings page's notice, one tone per cause. */
+.notice {
+  margin-top: 12px;
+  padding: 8px 0 8px 12px;
+  border-inline-start: 3px solid var(--notice);
+  font-size: 0.8125rem;
+}
+
+.noticeDanger {
+  border-inline-start-color: var(--danger);
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.groupTitle {
+  margin: 16px 0 6px;
+  font-size: 0.9375rem;
+}
+
+.groupTitle:first-of-type {
+  margin-top: 0;
+}
+
+/* Tables scroll inside their card at phone width instead of widening the page. */
+.scroll {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th {
+  text-align: start;
+  font-weight: 600;
+  color: var(--text-dim);
+  padding: 4px 12px 4px 0;
+  border-bottom: 1px solid var(--border-strong);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 4px 12px 4px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.18);
+  vertical-align: top;
+}
+
+.mono {
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+
+.raw {
+  font-family: var(--mono);
+  color: var(--text-faint);
+  overflow-wrap: anywhere;
+}
+
+/* An absent unit is the "cannot" half of the overview: still listed, visibly receded. */
+.muted td {
+  color: var(--text-faint);
+}
+
+.unknown {
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+.cellError { color: var(--notice); }
+.cellTimeout { color: var(--danger); }
+.cellHidden { color: var(--text-faint); font-style: italic; }
+
+.statusPresent { color: var(--success); }
+.statusTimeout { color: var(--danger); }
+
+.nodeTitle {
+  margin: 16px 0 6px;
+  font-size: 0.9375rem;
+  font-family: var(--mono);
+}
+
+/* The census totals: label over number, wrapping into as many columns as the card allows. */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: 8px 16px;
+  margin: 12px 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary dt {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+}
+
+.summary dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* A PDO the entity table does not know: the finding this card exists for, so it is tinted, and
+   the word in its own column says the same thing for anyone who cannot see the tint. */
+.unlisted td {
+  background: color-mix(in srgb, var(--notice) 14%, transparent);
+}
+
+.subTitle {
+  margin: 20px 0 6px;
+  font-size: 0.9375rem;
+}

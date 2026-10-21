@@ -1,0 +1,111 @@
+/* Shared styles for the settings sections.
+   Every rule here is used by a section in this directory. */
+
+/* Vertical stack — one gap for a whole card's worth of controls. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Helper text: true, and not urgent. */
+.hint {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+/* Something the owner should read before doing the thing next to it. --notice and not the raw
+   brand orange: at this size it is body text, and the brand value is 2.7:1 on the light card
+   (global.css, --z-notice-deep). These are the plaintext broker-password warning and "<network> is
+   secured and the password box is empty" -- unreadable is the same as absent for both. */
+.warn {
+  font-size: 0.8125rem;
+  color: var(--notice);
+}
+
+/* A warning with more than one sentence in it — the password-recovery block. Bordered on the
+   leading edge rather than boxed, so it reads as part of the field above and not as an error
+   that has already happened. */
+.warnBlock {
+  border-inline-start: 3px solid var(--notice);
+  padding: 8px 0 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8125rem;
+}
+
+/* The Wi-Fi consequences list. Same treatment, in the accent colour: it is not a warning
+   about a mistake, it is a description of what is about to happen. */
+.beforeYouPress {
+  border-inline-start: 3px solid var(--accent);
+  padding: 8px 0 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8125rem;
+}
+
+.beforeYouPress ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-inline-start: 18px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* --- one answer from the device ------------------------------------------------------- */
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  /* Left border carries the tone; the fill stays neutral so that four notices stacked after a
+     failed save do not turn the card into a colour chart. */
+  border-inline-start-width: 3px;
+  font-size: 0.8125rem;
+}
+
+.noticeHead {
+  color: var(--text);
+}
+
+.noticeBody {
+  color: var(--text-dim);
+}
+
+.status {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-inline-end: 8px;
+  opacity: 0.8;
+}
+
+/* 501 and 404: the route is declared and this build has no code behind it. Not a fault, and
+   painting it red would teach the owner that red means nothing. */
+.pending {
+  border-inline-start-color: var(--accent);
+}
+
+/* 401/403: the device understood and said no. The owner can act on it. The 3 px edge is the
+   only thing separating this notice from the other three, so it is held to 1.4.11's 3:1 the
+   same way the text is -- via --notice. */
+.denied {
+  border-inline-start-color: var(--notice);
+}
+
+.error {
+  border-inline-start-color: var(--danger);
+}
+
+/* Nothing answered. Grey, because the device has said nothing — including nothing bad. */
+.offline {
+  border-inline-start-color: var(--text-dim);
+}

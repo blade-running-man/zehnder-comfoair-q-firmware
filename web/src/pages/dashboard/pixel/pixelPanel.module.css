@@ -1,0 +1,84 @@
+/* The dark neon "display" panel the pixel scenes sit on (Bypass, Filters) — shared so the two
+   read as one instrument cluster. Its colours are FIXED, on purpose and for the same reason as
+   the thermostat's boiler panel: it reads the same in the light and dark themes, and a light
+   background washed the neon scenes out. So the panel does NOT use the theme tokens for its own
+   surface/text; the cards around it and the controls below it do. */
+
+.panel {
+  position: relative;
+  margin-top: 10px;
+  clip-path: var(--razor);
+  background: radial-gradient(120% 90% at 50% 0%, #14142a 0%, #08080f 62%);
+  box-shadow: inset 0 0 0 1px #3a3a52;
+  overflow: hidden;
+  color: #e8f7ff;
+}
+
+/* A faint HUD grid behind the scene; the canvas is transparent, so it shows through. */
+.panel::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.status {
+  position: relative;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 10px 14px;
+  border-bottom: 1px solid #2a2338;
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.statusKey { color: #96a7bd; }
+.statusState { font-weight: 800; color: #ff5b8d; text-shadow: 0 0 8px rgba(255, 42, 109, 0.5); }
+.pill {
+  display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px;
+  clip-path: var(--razor-sm); box-shadow: inset 0 0 0 1px #3a3a52; color: #96a7bd;
+  font-size: 0.62rem;
+}
+.pill::before { content: ""; width: 6px; height: 6px; background: currentColor; flex: none; }
+.pillOn { color: #00f0ff; box-shadow: inset 0 0 0 1px rgba(0, 240, 255, 0.5); }
+.pillNotice { color: #fcee0a; box-shadow: inset 0 0 0 1px rgba(252, 238, 10, 0.5); }
+
+/* The neon value colours, shared by the readings and the stat tiles. */
+.cold { color: #00f0ff; text-shadow: 0 0 8px rgba(0, 240, 255, 0.45); }
+.warm { color: #ff8a3d; text-shadow: 0 0 8px rgba(255, 138, 61, 0.45); }
+.magenta { color: #ff5b8d; text-shadow: 0 0 8px rgba(255, 42, 109, 0.45); }
+.yellow { color: #fcee0a; text-shadow: 0 0 8px rgba(252, 238, 10, 0.35); }
+
+.stats {
+  position: relative;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+  padding: 6px 14px 12px;
+}
+.stat {
+  background: rgba(10, 12, 26, 0.6);
+  clip-path: var(--razor-sm);
+  box-shadow: inset 0 0 0 1px #3a3a52;
+  padding: 8px 10px;
+}
+.statVal {
+  display: block; font-family: var(--mono); font-size: 1.2rem; font-weight: 800; line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.statVal small { font-size: .6em; font-weight: 600; margin-left: 3px; opacity: .75; }
+.statLabel {
+  display: block; font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #b6a9d2;
+}
+@media (max-width: 560px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+.srOnly {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+.green { color: #05ffa1; text-shadow: 0 0 8px rgba(5, 255, 161, 0.4); }
+.red { color: #ff4060; text-shadow: 0 0 8px rgba(255, 64, 96, 0.45); }
+.grey { color: #6a7182; }
+.pillGood { color: #05ffa1; box-shadow: inset 0 0 0 1px rgba(5, 255, 161, 0.5); }
+.pillBad { color: #ff4060; box-shadow: inset 0 0 0 1px rgba(255, 64, 96, 0.55); }

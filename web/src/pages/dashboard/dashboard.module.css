@@ -1,0 +1,54 @@
+/* Shared chrome for the home dashboard: the page shell, the masthead, the card look every
+   section wears, and the entrance stagger. One vocabulary so the sections read as one system. */
+
+.shell { max-width: 64rem; margin: 0 auto; padding: 4px 0 8px; }
+
+.status { display: flex; align-items: center; gap: 8px; margin: 0 2px 14px; font-size: 12.5px; color: var(--text-dim); }
+.statusDot { width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--text-faint); }
+.statusOpen { background: var(--success); box-shadow: 0 0 0 3px color-mix(in srgb, var(--success) 22%, transparent); }
+.statusConnecting { background: var(--notice); }
+.statusClosed { background: var(--danger); }
+
+.masthead { margin-bottom: 16px; }
+.wordmark { display: flex; align-items: center; gap: 9px; }
+.mark {
+  width: 26px; height: 26px; flex: none; display: grid; place-items: center;
+  color: var(--brand); background: color-mix(in srgb, var(--brand) 14%, transparent);
+  /* Razor-clipped like every other surface; the frame is an inset line because clip-path
+     cuts a real border's corners off. */
+  clip-path: var(--razor-sm);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand) 40%, transparent);
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--brand) 45%, transparent));
+}
+.title { font-size: 17px; font-weight: 700; letter-spacing: -.01em; margin: 0; }
+.title span { color: var(--text-faint); font-weight: 600; }
+.tagline { margin: 9px 0 0; color: var(--text-dim); font-size: 13.5px; max-width: 44rem; text-wrap: pretty; }
+
+.grid { display: grid; gap: 14px; }
+.two { display: grid; gap: 14px; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); }
+@media (max-width: 820px) { .two { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--bg-card); padding: 16px 18px; position: relative;
+  /* The razor notch, as on the global .card. clip-path also clips an outer shadow and a real
+     border's corners, so the frame is an inset line plus a neon hairline along the top edge. */
+  clip-path: var(--razor);
+  box-shadow: inset 0 0 0 1px var(--border), inset 0 1px 0 0 color-mix(in srgb, var(--accent) 55%, transparent);
+  background-image: linear-gradient(color-mix(in srgb, var(--accent) 7%, transparent), transparent 64px);
+}
+.cardHead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.h2 {
+  font-family: var(--mono); font-size: 12.5px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; margin: 0; color: var(--brand); text-shadow: var(--glow-brand);
+}
+.sub { font-size: 12.5px; color: var(--text-dim); margin: 0; }
+
+/* One authored entrance, staggered, from an already-laid-out default. */
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: rise .55s var(--ease-out) both; }
+  .rise:nth-child(2) { animation-delay: .07s; }
+  .rise:nth-child(3) { animation-delay: .14s; }
+  .rise:nth-child(4) { animation-delay: .21s; }
+  .rise:nth-child(5) { animation-delay: .28s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+}

@@ -1,0 +1,302 @@
+/* The scanline overlay and the title/logo glitch live in their own file: they are the one
+   part of the look that moves, and every rule there is gated on reduced motion. */
+@import "./effects.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Cybercore palette, shared with the owner's OpenTherm thermostat SPA so the
+   two devices on the same network read as one family.
+   Near-black canvas, neon-magenta primary, cyan secondary, yellow notice.
+   This REPLACES the zehnder.nl brand palette the SPA started with.
+   Components consume the SEMANTIC tokens below and never a raw hex: to recolour
+   the app, change these, and every page follows. Colour is never the sole
+   carrier of meaning anywhere -- a label or shape always says the same thing.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* ── Semantic tokens — dark theme (default) ───────────────────────────── */
+:root {
+  color-scheme: dark;
+
+  --bg:            #0a0a0f;
+  --bg-grad:       radial-gradient(135% 90% at 50% 0%, #16161f 0%, #0a0a0f 55%);
+  --bg-card:       #14141c;
+  --bg-input:      #08080d;
+  --bg-sunken:     #08080d;
+  --border:        #262636;
+  --border-strong: #3a3a52;
+  --text:          #e8f7ff;
+  --text-dim:      #96a7bd;
+  --text-faint:    #6a7182;
+  --accent:        #ff2a6d; /* magenta — the primary action colour */
+  --accent-hover:  #ff5b8d;
+  --accent-fg:     #0a0a0f;
+  --brand:         #00f0ff; /* cyan — logo and secondary accents */
+  --danger:        #ff4060;
+  --danger-fg:     #0a0a0f;
+  --success:       #05ffa1;
+  --notice:        #fcee0a; /* yellow — warnings and refusals */
+  --radius: 4px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* The angular "razor" notch (top-right + bottom-left cut) — cybercore's silhouette. */
+  --razor:    polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  --razor-sm: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  --scanline: rgba(0, 0, 0, 0.14);
+
+  --glow-accent: 0 0 8px rgba(255, 42, 109, 0.55), 0 0 18px rgba(255, 42, 109, 0.30);
+  --glow-brand:  0 0 8px rgba(0, 240, 255, 0.55), 0 0 18px rgba(0, 240, 255, 0.30);
+}
+
+/* ── Semantic tokens — light theme (synthwave on paper) ───────────────── */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg:            #f4f5fa;
+  --bg-grad:       radial-gradient(135% 90% at 50% 0%, #ffffff 0%, #f4f5fa 55%);
+  --bg-card:       #ffffff;
+  --bg-input:      #ece9f5;
+  --bg-sunken:     #ece9f5;
+  --border:        #d7d3e6;
+  --border-strong: #b3adcf;
+  --text:          #14141c;
+  --text-dim:      #4a4a5e;
+  --text-faint:    #7a7a90;
+  /* Magenta/cyan/green darkened for AA (4.5:1) on white AND the tinted input surfaces,
+     verified with the contrast calc: accent 4.8:1, brand 5.2:1, success 5.4:1. */
+  --accent:        #c8104f;
+  --accent-hover:  #a50d41;
+  --accent-fg:     #ffffff;
+  --brand:         #067884;
+  --danger:        #c01038;
+  --danger-fg:     #ffffff;
+  --success:       #0a7a4a;
+  --notice:        #8a6d00;
+
+  --scanline: rgba(0, 0, 0, 0.05);
+  --glow-accent: 0 0 6px rgba(200, 16, 79, 0.28);
+  --glow-brand:  0 0 6px rgba(6, 120, 132, 0.28);
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* The gradient lives on body (not the tokens) so pages keep a flat --bg for
+   logic while the canvas gains depth. Fixed so it does not scroll away. */
+body {
+  background: var(--bg-grad) fixed;
+}
+
+/* Sized in rem, not px, so the whole UI scales with the browser's font-size
+   setting -- the web equivalent of Dynamic Type. 0.875rem == 14px at the
+   default 16px root. Kept on body, not html: rem is measured from the root, so
+   shrinking html would drag every other rem down with it. DO NOT reintroduce a
+   px font-size here. */
+body {
+  font-size: 0.875rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  background: var(--bg-input);
+  color: var(--text);
+  /* The razor notch is the cybercore silhouette; clip-path also clips box-shadow, so the
+     focus ring below is an outline (not a glow) — outline is not clipped and stays visible. */
+  clip-path: var(--razor-sm);
+  transition: background 0.15s, border-color 0.15s;
+}
+button:hover {
+  border-color: var(--accent);
+}
+button:focus-visible {
+  border-color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button variants live in components/ui/Button.module.css, not here: they are the
+   one component's concern, not a global utility. This file keeps only the base
+   <button> reset above, which every button shares. */
+
+input, select, textarea {
+  font: inherit;
+  background: var(--bg-input);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: var(--glow-accent);
+}
+
+input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--accent);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+  font-size: 0.8125rem;
+}
+
+/* Each screen's title is an <h1> (WCAG 1.3.1: a page needs a top-level heading). Sized to sit
+   level with the <h2> it replaced so the heading level was added without a visual jump. */
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+}
+
+.card {
+  background: var(--bg-card);
+  /* Razor notch instead of a rounded border. clip-path clips a real border's corners off, so
+     the frame is an inset box-shadow (drawn inside, follows the clip on the straight edges). */
+  clip-path: var(--razor);
+  box-shadow: inset 0 0 0 1px var(--border);
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+/* A sentence under a form field, wired to its input with aria-describedby (TextField.tsx).
+   Global rather than a module because TextField's own markup is global -- .form-group and
+   .form-row live here too, and splitting one component's styles across two files to add one
+   rule would cost more than it saves. */
+.field-note {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+
+/* The region is the fixed, centred column; toasts stack inside it so several at
+   once no longer land on the same spot. pointer-events:none keeps the empty,
+   always-mounted region from swallowing clicks. */
+.toast-region {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.toast {
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  box-shadow: var(--glow-accent);
+  animation: fadeIn 0.2s;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  font-size: 1.125rem;
+  line-height: 1;
+  color: var(--text-dim);
+}
+.theme-toggle:hover {
+  color: var(--accent);
+  border: none;
+  background: none;
+}
+
+/* Centring now lives on .toast-region, so the toast itself only needs to rise. */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Dashboard tokens. The home dashboard (pages/dashboard) needs a wider
+   vocabulary than the forms above: the four semantic AIR colours, shape and
+   motion. Every air quantity is drawn
+   as a shape/length as well as one of these hues, so the reading survives a
+   colour-blind eye.
+
+   Warm is orange, not the magenta accent, so "warm air" and "the thing you
+   can press" never look alike. The pixel scenes (pixel*.ts) draw with their
+   own fixed palette on a dark panel; the hero re-declares these tokens for
+   its dark panel (Hero.module.css).
+   ───────────────────────────────────────────────────────────────────────── */
+:root {
+  --accent-strong: #ff5b8d;
+
+  /* the four semantic air colours — cold → warm */
+  --c-cold: #00f0ff;
+  --c-cool: #4d8dff;
+  --c-mild: #b26bff;
+  --c-warm: #ff8a3d;
+
+  /* Cybercore is angular: the old pills and rounded cards become squared segments. Kept as
+     tokens (rather than deleted) so every dashboard rule changes shape from this one place. */
+  --r:      2px;
+  --r-pill: 2px;
+
+  /* Emil's stronger curves — the built-in easings lack the punch that reads as intentional. */
+  --ease-out:  cubic-bezier(.23,1,.32,1);
+}
+
+/* Darkened for AA on white, the same way the base light tokens are. */
+[data-theme="light"] {
+  --accent-strong: #a50d41;
+
+  --c-cold: #067884;
+  --c-cool: #2456c8;
+  --c-mild: #7a2fd0;
+  --c-warm: #b4530a;
+}

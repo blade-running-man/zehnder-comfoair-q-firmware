@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "permissions": {
+    "allow": [
+      "Bash(pio run*)",
+      "Bash(pio test*)",
+      "Bash(pio check*)",
+      "Bash(pio device list*)",
+      "Bash(pio pkg*)",
+      "Bash(~/.platformio/penv/bin/pio *)",
+      "Bash(npm ci*)",
+      "Bash(npm run*)",
+      "Bash(npm test*)",
+      "Bash(npx tsc*)",
+      "Bash(npx vite*)",
+      "Bash(python3 tools/*)",
+      "Bash(python3 -m pytest*)",
+      "Bash(clang-format*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git show*)",
+      "Bash(git blame*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(wc *)",
+      "Bash(find *)",
+      "Bash(rg *)",
+      "Bash(nm *)",
+      "Bash(size *)",
+      "Bash(xxd *)",
+      "Read(//Users/olek/OwnProjects/zehnder-comfoair/**)",
+      "Edit(.claude/**)"
+    ],
+    "ask": [
+      "Bash(pio run -t upload*)",
+      "Bash(pio run -t erase*)",
+      "Bash(esptool*)"
+    ],
+    "deny": [
+      "Bash(git push*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -fd*)",
+      "Edit(components/comfoair_registry/include/registry_generated.h)",
+      "Edit(web/src/api/types.ts)",
+      "Edit(sdkconfig.m5stack-nanoc6)"
+    ],
+    "additionalDirectories": [
+      "/Users/olek/OwnProjects/zehnder-comfoair/zehnder-comfoair-q-esphome"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/file-size-guard.sh\" 2>/dev/null || true",
+            "timeout": 10,
+            "statusMessage": "Checking file size budget"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "context7"
+  ]
+}

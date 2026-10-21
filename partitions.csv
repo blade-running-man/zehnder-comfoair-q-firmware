@@ -1,0 +1,19 @@
+# Name,     Type, SubType, Offset,   Size,     Flags
+# Two OTA slots on the NanoC6's 4 MB. There is no filesystem partition: the web
+# UI is compiled into the application via EMBED_FILES (components/web_assets/CMakeLists.txt),
+# so nothing on the device reads files and a filesystem would be flash spent on nothing.
+#
+# DO NOT move ota_0 off 0x10000. The stock partitions_two_ota_large.csv gives nvs
+# 0x6000, which pushes the first app partition to 0x20000 once it is aligned --
+# and PlatformIO then assembles firmware.factory.bin with the application at
+# 0x10000 regardless, so `merge-bin` aborts with "Detected overlap at address
+# 0x10000". That image is what ESP Web Tools installs (AGENTS.md criterion 1), so the failure is
+# not cosmetic. nvs is 0x4000 here for exactly that reason.
+#
+# Slots are 1984 KiB each -- larger than the stock table's 1700 KiB, because
+# starting at 0x10000 leaves more to divide. 64 KiB spare at the top.
+nvs,        data, nvs,     0x9000,   0x4000,
+otadata,    data, ota,     0xd000,   0x2000,
+phy_init,   data, phy,     0xf000,   0x1000,
+ota_0,      app,  ota_0,   0x10000,  0x1F0000,
+ota_1,      app,  ota_1,   0x200000, 0x1F0000,

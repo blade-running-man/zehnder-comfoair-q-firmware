@@ -1,0 +1,26 @@
+## Managed dependencies. THE FIRST MANIFEST THIS PROJECT HAS EVER HAD.
+##
+## WHY IT IS HERE AND NOT IN THE PROJECT ROOT, which is where it was first put:
+## the IDF component manager reads a manifest that belongs to a COMPONENT, and under
+## PlatformIO the project's `main` component is src/. A root-level idf_component.yml
+## builds green and is SILENTLY IGNORED -- no managed_components/, no dependencies.lock,
+## no error. That was measured, not assumed: the root placement was built first and
+## produced a clean SUCCESS with nothing fetched, which is the worst possible failure
+## mode for a dependency file. DO NOT move this to the project root.
+##
+## Both are first-party Espressif components. The rule against reaching for a
+## third-party library where a first-party one exists therefore argues
+## FOR these and against the hand-rolled driver/rmt_tx alternative that an earlier draft
+## recommended. ESP-IDF 5.x dropped components/mdns from its tree, so the registry is the only
+## source of mDNS anyway, and once that manifest exists led_strip adds nothing new to the build.
+## PINNED EXACTLY, NOT BY RANGE, and the reason is written in platformio.ini:13-19: a floating
+## dependency once moved the toolchain under ESP-IDF facts that had been verified against a
+## different tree. A caret range is the same failure with a smaller radius -- the next machine to
+## resolve it gets a component nobody in this repository has built. Both versions below are what
+## dependencies.lock actually resolved on 2026-09-06 -- pasted from it, not chosen -- and bumping
+## either is a deliberate act that says so. led_strip is pinned by the indication task that first
+## links it; mdns is pinned to the same resolved version so the manifest has one rule, and the
+## mDNS task owns any move of that line.
+dependencies:
+  espressif/mdns: "1.12.0"
+  espressif/led_strip: "3.0.3"

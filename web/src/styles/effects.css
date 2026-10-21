@@ -1,0 +1,39 @@
+/* ── Cyberpunk effects (cybercore-inspired) ─────────────────────────────────
+   Every ANIMATION is gated behind prefers-reduced-motion: no-preference — a viewer who asked
+   for less motion still gets the palette, razor edges and a static chromatic title, but a still
+   screen: no scanline flicker, no glitch jitter. Contrast is unaffected (axe verified): the
+   scanline overlay is faint and non-interactive, the title's colour still carries the text. */
+
+/* CRT scanlines: a fixed, non-interactive overlay across the viewport. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: repeating-linear-gradient(var(--scanline) 0 1px, transparent 1px 3px);
+}
+
+/* The page title: a permanent, subtle cyan/magenta chromatic split, with an occasional glitch. */
+h1 {
+  text-shadow: -1px 0 rgba(0, 240, 255, 0.5), 1px 0 rgba(255, 42, 109, 0.5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body::after { animation: scan-flicker 5s infinite; }
+  h1 { animation: glitch-title 4.5s infinite; }
+}
+
+@keyframes scan-flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.7; }
+  98% { opacity: 0.95; }
+  99% { opacity: 0.8; }
+}
+
+@keyframes glitch-title {
+  0%, 92%, 100% { text-shadow: -1px 0 rgba(0, 240, 255, 0.5), 1px 0 rgba(255, 42, 109, 0.5); transform: none; }
+  93% { text-shadow: -3px 0 rgba(0, 240, 255, 0.85), 3px 0 rgba(255, 42, 109, 0.85); transform: translateX(1px); }
+  95% { text-shadow: 3px 0 rgba(0, 240, 255, 0.85), -3px 0 rgba(255, 42, 109, 0.85); transform: translateX(-1px); }
+  97% { text-shadow: -2px 0 rgba(0, 240, 255, 0.6), 2px 0 rgba(255, 42, 109, 0.6); transform: none; }
+}

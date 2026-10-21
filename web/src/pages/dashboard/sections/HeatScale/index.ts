@@ -1,0 +1,1 @@
+export { HeatScale } from "./HeatScale";

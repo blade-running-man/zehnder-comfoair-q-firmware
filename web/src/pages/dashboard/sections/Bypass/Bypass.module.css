@@ -1,0 +1,80 @@
+/* "Where the air goes" — the unit as a pixel scene (pixelUnit.ts) with real text over it, on the
+   shared dark panel (pixelPanel.module.css). */
+
+/* Capped and centred: the card spans the page, and a full-width scene grew taller than the
+   screen. */
+.stage { position: relative; display: flex; justify-content: center; padding: 6px 14px 0; }
+
+/* The scene keeps the canvas's own 180×129 proportions; every label is placed in % of it, so the
+   readings stay beside their ducts at any width. container-type lets the label sizes follow the
+   scene's width (cqw) instead of the viewport's. The readings sit in the empty columns either
+   side of the cabinet (x < 46 and x > 128 of 180), under the ducts, in the ducts' top-to-bottom
+   order: outdoor air over exhaust on the left, supply over room air on the right. */
+.scene {
+  position: relative; width: 100%; max-width: 640px;
+  aspect-ratio: 180 / 129;
+  container-type: inline-size;
+}
+.canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.12));
+}
+
+.reading {
+  position: absolute; max-width: 21%;
+  display: flex; flex-direction: column; gap: 1px;
+  font-family: var(--mono); line-height: 1.1; pointer-events: none;
+  text-shadow: 0 1px 2px #000;
+}
+.l1 { left: 0; top: 34%; }
+.l2 { left: 0; top: 58%; }
+.r1 { right: 0; top: 34%; align-items: flex-end; text-align: right; }
+.r2 { right: 0; top: 58%; align-items: flex-end; text-align: right; }
+.rLabel {
+  font-size: clamp(6px, 1.7cqw, 10px); font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: #96a7bd; white-space: nowrap;
+}
+.rLine { display: flex; flex-direction: column; gap: 1px; }
+.r1 .rLine, .r2 .rLine { align-items: flex-end; }
+.rLine b { font-size: clamp(11px, 3.6cqw, 20px); font-weight: 800; font-variant-numeric: tabular-nums; }
+.rRh { font-size: clamp(8px, 2.2cqw, 13px); color: #b6c3d6; font-variant-numeric: tabular-nums; }
+
+.zone {
+  position: absolute; top: 88%; pointer-events: none;
+  font-family: var(--mono); font-size: clamp(5px, 1.4cqw, 9px); font-weight: 800;
+  letter-spacing: .16em; text-transform: uppercase; color: #6a7182; white-space: nowrap;
+}
+.zoneOut { left: 0; }
+.zoneHome { right: 0; }
+
+/* Under the two fans in their pockets beside the exchanger (x 64 and 116, bottom y 108 of the
+   180×129 canvas). */
+.fanTag {
+  position: absolute; top: 85.5%; transform: translateX(-50%); pointer-events: none;
+  font-family: var(--mono); font-size: clamp(5px, 1.8cqw, 9px); font-weight: 800;
+  letter-spacing: .12em; text-transform: uppercase; color: #96a7bd; white-space: nowrap;
+}
+.fanL { left: 35.6%; }
+.fanR { left: 64.4%; }
+
+/* The one control: the bypass mode. */
+.control { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.controlLabel {
+  font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+.modes {
+  display: flex; flex: 1; min-width: 12rem; background: var(--bg-sunken);
+  border: 1px solid var(--border); border-radius: var(--r-pill); padding: 3px; gap: 2px;
+}
+.modes button {
+  flex: 1; font: inherit; font-size: 12.5px; font-weight: 600; padding: 6px 4px;
+  border: none; background: none; color: var(--text-dim); border-radius: var(--r-pill); cursor: pointer;
+  transition: background .18s var(--ease-out), color .18s var(--ease-out), transform .12s var(--ease-out);
+}
+.modes button:active { transform: scale(.96); }
+.modes button[aria-checked="true"] { background: var(--accent); color: var(--accent-fg); }
+@media (hover: hover) and (pointer: fine) { .modes button:hover { color: var(--text); } }
+@media (prefers-reduced-motion: reduce) { .modes button { transition: none; } }

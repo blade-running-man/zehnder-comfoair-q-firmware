@@ -1,0 +1,54 @@
+/* The filter card: the pixel cartridges (pixelFilters.ts) beside the days-left readout, and a
+   segmented life bar, on the shared dark panel (pixelPanel.module.css). Panel colours are fixed;
+   the note under the panel uses the theme tokens. */
+
+.body {
+  position: relative;
+  display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  align-items: center; gap: 14px; padding: 10px 14px 4px;
+}
+@media (max-width: 560px) { .body { grid-template-columns: 1fr; } }
+
+/* The scene keeps the canvas's own 100×70 proportions, so the tags stay under their cartridges
+   at any width; container-type lets the tag size follow the scene, not the viewport. */
+.scene { position: relative; aspect-ratio: 100 / 70; max-width: 360px; container-type: inline-size; }
+.canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.18));
+}
+.tag {
+  position: absolute; top: 91%; transform: translateX(-50%); white-space: nowrap; pointer-events: none;
+  font-family: var(--mono); font-size: clamp(7px, 2.6cqw, 10px); font-weight: 800;
+  letter-spacing: .14em; text-transform: uppercase; color: #96a7bd;
+}
+.tagOut { left: 27%; }
+.tagExt { left: 73%; }
+
+.read { min-width: 0; font-family: var(--mono); }
+.big { font-size: 3rem; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+.cap {
+  margin-top: 4px; font-size: 0.68rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: #96a7bd;
+}
+.dates {
+  display: flex; flex-direction: column; gap: 2px; margin-top: 12px;
+  font-size: 0.72rem; color: #b6c3d6; font-variant-numeric: tabular-nums;
+}
+.dates b { color: #6a7182; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-right: 6px; }
+
+/* Crisp square cells, no radius: the bar is part of the pixel display. The lit ones take the
+   state's text colour (p.green / p.yellow / p.red) as their fill via currentColor. */
+.life {
+  position: relative;
+  display: grid; grid-template-columns: repeat(18, 1fr); gap: 3px;
+  padding: 10px 14px 14px;
+}
+.cell { height: 10px; background: currentColor; box-shadow: 0 0 6px currentColor; }
+.spent {
+  color: transparent; box-shadow: inset 0 0 0 1px #3a3a52;
+  background: repeating-linear-gradient(135deg, #1d1726 0 2px, #14101c 2px 4px);
+}
+
+.note { margin: 12px 0 0; font-size: 12.5px; color: var(--text-dim); text-wrap: pretty; }

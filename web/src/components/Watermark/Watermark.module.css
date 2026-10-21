@@ -1,0 +1,14 @@
+/* Fixed in the corner and click-through: it sits over content and must never take a tap meant
+   for a control beneath it. */
+.watermark {
+  position: fixed;
+  right: 12px;
+  bottom: 8px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  opacity: 0.6;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}

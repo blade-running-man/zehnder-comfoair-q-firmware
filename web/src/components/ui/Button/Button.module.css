@@ -1,0 +1,24 @@
+/* Variant styling for the Button primitive. Base <button> looks (border, radius,
+   padding, hover) still come from the element selector in global.css; this module
+   only adds the prominence variants, so every components/ui/ primitive is scoped
+   the same way -- none of them reach into global utility classes. */
+
+.primary {
+  background: var(--accent);
+  color: var(--accent-fg);
+  border-color: var(--accent);
+  font-weight: 600;
+  box-shadow: var(--glow-accent);
+}
+.primary:hover {
+  background: var(--accent-hover);
+}
+
+.danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.danger:hover {
+  background: var(--danger);
+  color: var(--danger-fg);
+}

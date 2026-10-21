@@ -1,0 +1,96 @@
+/* The System page's notices (a 3 px edge in the tone's colour) and the theme tokens; the only
+   new shape is the upload bar. */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardHeading {
+  margin-bottom: 12px;
+}
+
+.hint {
+  color: var(--text-dim);
+  margin-bottom: 12px;
+  font-size: 0.8125rem;
+}
+
+.file {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  /* A long file name must wrap at phone width, not widen the card. */
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.notice {
+  margin-top: 12px;
+  padding: 8px 0 8px 12px;
+  border-inline-start: 3px solid var(--notice);
+  font-size: 0.875rem;
+}
+
+.notice p + p {
+  margin-top: 6px;
+}
+
+.notice .hint {
+  margin-bottom: 0;
+}
+
+.noticeDanger {
+  border-inline-start-color: var(--danger);
+}
+
+.noticeOk {
+  border-inline-start-color: var(--success);
+}
+
+/* Facts with no tone of their own: a reinstall, or two versions that cannot be ordered. */
+.noticeNeutral {
+  border-inline-start-color: var(--border);
+}
+
+.version {
+  font-family: var(--mono);
+  overflow-wrap: anywhere;
+}
+
+.progressBlock {
+  margin-top: 12px;
+}
+
+.bar {
+  height: 8px;
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--accent);
+  box-shadow: var(--glow-accent);
+  transition: width 0.2s linear;
+}
+
+.status {
+  margin-top: 6px;
+  color: var(--text-dim);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    transition: none;
+  }
+}

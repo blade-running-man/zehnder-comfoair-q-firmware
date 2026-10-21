@@ -1,0 +1,36 @@
+/* Comfort & temperature. The season is read-only (the unit derives it), so it is stated, not
+   offered as a control; everything else here writes a real select on the unit. */
+
+.season { display: flex; align-items: center; gap: 10px; margin: 12px 0 2px; flex-wrap: wrap; }
+.seasonNote { font-size: 12.5px; color: var(--text-dim); text-wrap: pretty; max-width: 34rem; }
+.seasonNote b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.row { padding: 15px 0; border-top: 1px solid var(--border); }
+.primary { border-top: none; padding-top: 6px; }
+
+.rowHead { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.rowLabel { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-family: var(--mono); color: var(--text-dim); }
+.target { font-size: 12.5px; color: var(--text-faint); }
+.target b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.seg {
+  display: flex; background: var(--bg-sunken); border: 1px solid var(--border);
+  border-radius: var(--r-pill); padding: 3px; gap: 2px;
+}
+.seg button {
+  flex: 1; font: inherit; font-size: 12.5px; font-weight: 600; padding: 8px 4px;
+  border: none; background: none; color: var(--text-dim); border-radius: var(--r-pill);
+  cursor: pointer; white-space: nowrap;
+  transition: background .18s var(--ease-out), color .18s var(--ease-out), transform .12s var(--ease-out);
+}
+.seg button:active { transform: scale(.96); }
+.seg button[aria-checked="true"] {
+  background: var(--accent); color: var(--accent-fg);
+  box-shadow: 0 1px 2px rgba(0,0,0,.24);
+}
+@media (hover: hover) and (pointer: fine) { .seg button:hover { color: var(--text); } }
+.segSmall button { font-size: 12px; padding: 6px 4px; }
+
+.hint { margin: 8px 0 0; font-size: 12px; color: var(--text-faint); text-wrap: pretty; line-height: 1.4; }
+
+@media (prefers-reduced-motion: reduce) { .seg button { transition: none; } }

@@ -1,0 +1,183 @@
+<!doctype html>
+<!--
+  The browser installer. tools/make_release.py copies this file into dist/ beside manifest.json
+  and the four flash parts, and fills two tokens on the way: the version and the file name of the
+  OTA image (written in this comment without their at-signs, because make_release refuses a page
+  with an unknown token and would read a spelled-out token here as one). Edit freely; keep both
+  tokens in the body, or make_release refuses the page.
+
+  No build step and no local assets: the page is the file. The one script is ESP Web Tools,
+  pinned to an exact version -- a floating URL would change what every visitor runs without a
+  change in this repository, the same reason platformio.ini pins its platform.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install ComfoAir Q firmware</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10.4.0/dist/web/install-button.js"></script>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfa;
+    --fg: #23211f;
+    --muted: #6b6660;
+    --line: #e0ddd8;
+    --card: #ffffff;
+    --warn-bg: #fdf6e7;
+    --warn-line: #e6c65c;
+    --warn-fg: #6b5312;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #191817;
+      --fg: #e8e5e0;
+      --muted: #9c968e;
+      --line: #333130;
+      --card: #211f1e;
+      --warn-bg: #2b2410;
+      --warn-line: #7a6520;
+      --warn-fg: #e8d79a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow-wrap: anywhere;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .5rem; }
+  h2 { font-size: 1.05rem; margin: 2.5rem 0 .75rem; }
+  .lede { color: var(--muted); margin: 0 0 2rem; }
+  a { color: inherit; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .9em;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: .05em .35em;
+  }
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  .board h3 { margin: 0; font-size: 1rem; }
+  .board p { margin: .15rem 0 0; color: var(--muted); font-size: .875rem; }
+  .note {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-line);
+    color: var(--warn-fg);
+    border-radius: 8px;
+    padding: .9rem 1.15rem;
+    margin: 1.5rem 0;
+    font-size: .925rem;
+  }
+  .note strong { display: block; margin-bottom: .25rem; }
+  .unsupported { color: var(--muted); font-size: .875rem; max-width: 18rem; }
+  ol, ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>ComfoAir Q firmware</h1>
+  <p class="lede">
+    Puts a Zehnder ComfoAir Q ventilation unit on your network over its ComfoNet (CAN) bus, with
+    MQTT for Home Assistant, a REST API and its own web interface. One file for everyone:
+    Wi-Fi, the broker and the password are set in the browser after installing.
+    Version <code>@VERSION@</code>.
+  </p>
+
+  <!-- Remove once the acceptance criteria in AGENTS.md hold on a real unit (phase 10). -->
+  <div class="note">
+    <strong>Not yet accepted on a real unit.</strong>
+    It builds and its host tests pass, but the hardware-verification scenarios are still
+    being worked through. Treat a first install as a bring-up, and keep the USB cable at hand.
+  </div>
+
+  <h2>Install</h2>
+  <div class="board">
+    <div>
+      <h3>M5Stack NanoC6</h3>
+      <p>ESP32-C6 · 4 MB flash · CAN on the Grove port</p>
+    </div>
+    <esp-web-install-button manifest="manifest.json">
+      <span slot="unsupported" class="unsupported">Needs Chrome or Edge on a desktop computer.</span>
+      <span slot="not-allowed" class="unsupported">Needs an https:// page (or localhost).</span>
+    </esp-web-install-button>
+  </div>
+
+  <h2>Before you click</h2>
+  <ul>
+    <li>Use <strong>Chrome or Edge on a desktop computer</strong>. Installing needs Web Serial,
+      which Firefox, Safari and phones do not have.</li>
+    <li>Connect the NanoC6 with a USB-C cable that carries data, not only power.</li>
+    <li>In the port list, pick the entry called <code>USB JTAG/serial debug unit</code>
+      (<code>/dev/cu.usbmodem…</code> on a Mac, a <code>COM</code> port on Windows). The chip has
+      USB built in, so there is no driver to install.</li>
+    <li>If no port appears, or connecting fails: unplug the board, <strong>hold its button while
+      you plug the cable back in</strong>, then release it and try again. That starts the chip in
+      download mode. When the install finishes, unplug and replug <strong>without</strong> touching
+      the button &mdash; a board started with the button held stays in download mode and looks dead.</li>
+  </ul>
+
+  <h2>Your settings</h2>
+  <p>
+    The installer asks whether to erase the device first. <strong>Leave &ldquo;Erase device&rdquo;
+    unticked to keep everything</strong>: Wi-Fi, the web password, the broker and the other
+    settings live in a part of the flash this install does not write. Tick it for a clean start
+    &mdash; a board that ran other firmware before, or one whose settings you want gone.
+  </p>
+
+  <h2>After it installs</h2>
+  <ol>
+    <li>A device that has no Wi-Fi stored opens its own setup network,
+      <code>comfoair-xxxx</code>, where <code>xxxx</code> is four hex digits unique to the board.
+      It is open (no password). Join it from a phone or laptop and open
+      <code>http://192.168.4.1</code> in a browser &mdash; any address you type leads there.
+      The setup network stays up for about 15 minutes, longer while you are using it; if it is
+      gone, power the board off and on.</li>
+    <li>Choose your Wi-Fi and save. The device joins it and is then at its address on your network,
+      or at <code>http://comfoair-xxxx.local</code>.</li>
+    <li>In Settings, set a password, then enter the MQTT broker and turn on Home Assistant
+      discovery. Home Assistant finds the unit by itself; no integration is needed.</li>
+  </ol>
+  <p>
+    The installer will not offer &ldquo;Connect to Wi-Fi&rdquo;: this firmware does not speak
+    Improv Wi-Fi yet, so Wi-Fi is always set through the setup network above.
+  </p>
+
+  <h2>Updating later</h2>
+  <p>
+    No cable needed. Download <a href="@OTA_BIN@"><code>@OTA_BIN@</code></a> and upload it on the
+    device's own <strong>Update</strong> page. Updates require the web password to be set. If the
+    new version fails to start, the device goes back to the previous one by itself.
+  </p>
+
+  <footer>
+    MIT licensed. Not affiliated with or endorsed by Zehnder.
+  </footer>
+
+</main>
+</body>
+</html>

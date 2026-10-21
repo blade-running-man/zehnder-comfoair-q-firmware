@@ -1,0 +1,262 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   The cybercore look of the docs site, carried over from the device's own web UI
+   (web/src/styles/global.css + effects.css) so the docs and the SPA read as one
+   product: near-black canvas, neon-magenta primary, cyan secondary, yellow notice,
+   razor-notched corners, CRT scanlines and a glitching title.
+
+   VitePress is restyled through its own --vp-* variables first (cyber-palette.css,
+   imported before this file) and here through class overrides only where a variable
+   does not exist (shapes, fonts, glows).
+
+   Every ANIMATION is gated behind prefers-reduced-motion: no-preference -- a reader
+   who asked for less motion keeps the palette and the razor edges on a still page.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* ── Shared shape and type tokens ─────────────────────────────────────── */
+:root {
+  --cy-razor:    polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  --cy-razor-sm: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  --cy-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --vp-font-family-mono: var(--cy-mono);
+}
+
+/* ── Canvas and CRT scanlines ─────────────────────────────────────────── */
+body {
+  background: var(--cy-bg-grad) fixed;
+}
+.VPContent,
+.VPNav .content-body,
+.VPNavBar:not(.home.top) .content-body {
+  background-color: transparent;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: repeating-linear-gradient(var(--cy-scanline) 0 1px, transparent 1px 3px);
+}
+::selection {
+  background: var(--cy-accent);
+  color: var(--vp-c-bg);
+}
+
+/* ── Nav bar: the cyan mono logo, mono uppercase tabs ─────────────────── */
+.VPNavBar .content-body,
+.VPNavBar.has-sidebar .content-body {
+  background-color: color-mix(in srgb, var(--vp-c-bg-soft) 88%, transparent);
+  backdrop-filter: blur(6px);
+}
+.VPNavBar .divider-line {
+  background-color: var(--vp-c-border);
+}
+.VPNavBarTitle .title {
+  color: var(--cy-cyan);
+  font-family: var(--cy-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: var(--cy-glow-cyan);
+}
+.VPNavBar .VPNavBarMenuLink,
+.VPNavBar .VPNavBarMenuGroup .text {
+  font-family: var(--cy-mono);
+  /* Mono uppercase is wider than VitePress's sans: at 12px/0.1em the eight sections overflow a
+     1280px bar, so the tabs run tighter than the SPA's. */
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.VPNavBar .VPNavBarMenuLink:hover {
+  color: var(--cy-cyan);
+  text-shadow: var(--cy-glow-cyan);
+}
+.VPNavBar .VPNavBarMenuLink.active {
+  color: var(--cy-accent);
+  text-shadow: var(--cy-glow-accent);
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────── */
+.VPSidebar {
+  background-color: color-mix(in srgb, var(--vp-c-bg-alt) 92%, transparent);
+  border-right: 1px solid var(--vp-c-divider);
+}
+.VPSidebar .VPSidebarItem.level-0 > .item > .text,
+.VPSidebar .VPSidebarItem.level-0 > .item > .VPLink > .text {
+  font-family: var(--cy-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cy-cyan);
+}
+/* Only the current page's bar is lit; VitePress keeps the indicator transparent elsewhere. */
+.VPSidebar .VPSidebarItem.is-active > .item > .indicator {
+  width: 3px;
+  background-color: var(--cy-accent);
+  box-shadow: var(--cy-glow-accent);
+}
+.VPSidebar .VPSidebarItem.is-active > .item .link > .text {
+  text-shadow: var(--cy-glow-accent);
+}
+
+/* ── Headings: mono section rules, the chromatic page title ───────────── */
+.vp-doc h1 {
+  text-shadow: -1px 0 rgba(0, 240, 255, 0.5), 1px 0 rgba(255, 42, 109, 0.5);
+}
+.vp-doc h2 {
+  border-top: 1px solid var(--vp-c-divider);
+  border-image: linear-gradient(90deg, var(--cy-accent), var(--cy-cyan) 40%, transparent) 1;
+}
+.vp-doc h2,
+.vp-doc h3 {
+  letter-spacing: 0.01em;
+}
+.vp-doc a {
+  text-decoration-color: color-mix(in srgb, var(--cy-accent) 45%, transparent);
+}
+.vp-doc a:hover {
+  text-shadow: var(--cy-glow-accent);
+}
+
+/* ── Razor-notched surfaces. clip-path clips a real border's corners and any
+   box-shadow, so the frame is an inset box-shadow and the focus ring sits
+   inside the clip (negative outline-offset) -- DO NOT move it outside, the
+   clip would cut it away and leave keyboard focus invisible. ──────────── */
+.VPButton,
+.VPButton.medium,
+.VPButton.big {
+  border-radius: 0;
+  clip-path: var(--cy-razor-sm);
+  font-family: var(--cy-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.VPButton:focus-visible,
+.pager-link:focus-visible,
+.VPFeature:focus-visible {
+  outline: 2px solid var(--cy-cyan);
+  outline-offset: -4px;
+}
+
+.VPFeature,
+.VPFeature.link {
+  border: none;
+  border-radius: 0;
+  clip-path: var(--cy-razor);
+  background-color: var(--vp-c-bg-soft);
+  box-shadow: inset 0 0 0 1px var(--vp-c-divider);
+  transition: box-shadow 0.15s;
+}
+.VPFeature.link:hover {
+  box-shadow: inset 0 0 0 1px var(--cy-cyan);
+}
+.VPFeature .title {
+  font-family: var(--cy-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cy-cyan);
+}
+.VPFeature .link-text-value {
+  font-family: var(--cy-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vp-doc div[class*="language-"],
+.vp-code-group .tabs {
+  border-radius: 0;
+}
+.vp-doc div[class*="language-"] {
+  clip-path: var(--cy-razor-sm);
+  box-shadow: inset 0 0 0 1px var(--vp-c-divider);
+}
+.vp-doc :not(pre) > code {
+  border-radius: 2px;
+}
+
+.custom-block {
+  border-radius: 0;
+  border-width: 0 0 0 3px;
+  clip-path: var(--cy-razor-sm);
+}
+.custom-block .custom-block-title {
+  font-family: var(--cy-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pager-link {
+  border-radius: 0;
+  clip-path: var(--cy-razor-sm);
+}
+.pager-link .desc {
+  font-family: var(--cy-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.vp-doc table th {
+  font-family: var(--cy-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.VPLocalSearchBox .shell,
+.DocSearch-Button,
+.VPLocalSearchBox .search-bar,
+.VPLocalSearchBox .result {
+  border-radius: 0;
+}
+
+/* ── Home hero: magenta→cyan mono name ─────────────────────────────────
+   The name is gradient text (transparent fill), so its glow is a drop-shadow
+   filter: a text-shadow would show through the transparent glyphs. */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(100deg, var(--cy-accent) 10%, var(--cy-cyan) 90%);
+}
+.VPHero .name,
+.VPHero .text {
+  font-family: var(--cy-mono);
+  letter-spacing: -0.01em;
+}
+.VPHero .name {
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--cy-accent) 45%, transparent));
+}
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+}
+
+/* ── Motion, only for readers who did not ask for less ───────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  body::after { animation: cy-scan-flicker 5s infinite; }
+  .vp-doc h1 { animation: cy-glitch-title 4.5s infinite; }
+  .VPNavBarTitle .title { animation: cy-glitch-logo 6s infinite steps(2, end); }
+}
+
+@keyframes cy-scan-flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.7; }
+  98% { opacity: 0.95; }
+  99% { opacity: 0.8; }
+}
+
+@keyframes cy-glitch-title {
+  0%, 92%, 100% { text-shadow: -1px 0 rgba(0, 240, 255, 0.5), 1px 0 rgba(255, 42, 109, 0.5); transform: none; }
+  93% { text-shadow: -3px 0 rgba(0, 240, 255, 0.85), 3px 0 rgba(255, 42, 109, 0.85); transform: translateX(1px); }
+  95% { text-shadow: 3px 0 rgba(0, 240, 255, 0.85), -3px 0 rgba(255, 42, 109, 0.85); transform: translateX(-1px); }
+  97% { text-shadow: -2px 0 rgba(0, 240, 255, 0.6), 2px 0 rgba(255, 42, 109, 0.6); transform: none; }
+}
+
+/* The logo has no data-text copy to split (that would need a NavBarTitle override), so its
+   glitch is the same chromatic split as the title, briefer and rarer. */
+@keyframes cy-glitch-logo {
+  0%, 94%, 100% { text-shadow: var(--cy-glow-cyan); transform: none; }
+  95% { text-shadow: -2px 0 #ff2a6d, 2px 0 #00f0ff; transform: translateX(-1px); }
+  97% { text-shadow: 2px 0 #ff2a6d, -2px 0 #00f0ff; transform: translateX(1px); }
+}

@@ -1,0 +1,61 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+/* The one Save for the whole configuration document. Wrapping rather than a fixed row: on a
+   phone held in portrait -- which is how this page is read while standing in front of the
+   unit -- the sentence beside the button does not fit next to it. */
+.saveBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* What saving is about to do on the broker the device is talking to now, in front of the button
+   that would do it (broker.ts). Two classes and not one, because the two situations are not the
+   same volume: `brokerDanger` is every entity of this device about to be deleted from somebody's Home Assistant
+   and cannot be undone; `brokerWarn` is a tree that will simply be left behind on a broker that
+   is not answering, which costs nothing and blocks nothing.
+
+   Bordered on the leading edge rather than boxed, the same treatment .warnBlock uses in
+   sections.module.css: it belongs to the cards above it, not to a failure that has happened. */
+.brokerWarn,
+.brokerDanger {
+  border-inline-start: 3px solid var(--notice);
+  padding: 8px 0 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8125rem;
+}
+
+.brokerDanger {
+  border-inline-start-color: var(--danger);
+}
+
+/* The by-hand cleanup command. Wrapped rather than scrolled -- it is read on a phone standing
+   in front of the unit as often as on a desktop -- and `break-all` because a broker address is
+   one unbreakable token to a browser and would otherwise push the page sideways. */
+.command {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  background: var(--bg-input);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
